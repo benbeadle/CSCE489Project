@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <link href="map.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+
+    <style>
+      .ui-autocomplete {
+        max-height: 100px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+      }
+      /* IE 6 doesn't support max-height
+       * we use height instead, but this forces the menu to always be this tall
+       */
+      * html .ui-autocomplete {
+        height: 100px;
+      }
+    </style>
+    
+
+    <script type='text/javascript'>
+
+      var chart;
+      var options;
+      var data;
+
+      $(function() {
+        var availableTags = [
+          'US',
+          'Germany',
+          'Brazil',
+          'France',
+          'Canada',
+          'RU',
+          'China'
+        ];
+      
+      function updateMap(country) {
+        console.log(country)
+        options = {
+          region: country,
+          colorAxis: {colors: ['blue', 'green','yellow', 'red']},
+          displayMode: 'regions',
+          resolution: 'country'
+        };
+        chart.draw(data, options);
+      }
+
+      $( "#tags" ).autocomplete({
+        source: availableTags,
+          select: function( event, ui ) {
+            updateMap( ui.item ? ui.item.value : this.value );
+          }
+        });
+      });
+
+      $(function() {
+        var availableTags = [
+          'Tiger',
+          'Monkey',
+          'Lizard',
+          'Cat',
+          'Dog',
+          'Owl',
+          'Bird'
+        ];
+
+        function log( message ) {
+          document.getElementById("rightconsole").innerHTML=message;
+        }
+      
+        $( "#animalTags" ).autocomplete({
+          source: availableTags,
+          select: function( event, ui ) {
+            log( ui.item ?
+              "Selected: " + ui.item.value :
+              "Nothing selected, input was " + this.value );
+          }
+        });
+      });  
+   
+    
+      google.load('visualization', '1', {'packages': ['geochart']});
+      google.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        data = google.visualization.arrayToDataTable([
+          ['Country', 'Extinct Animals'],
+          ['Germany', 200],
+          ['US', 300],
+          ['Brazil', 400],
+          ['Canada', 500],
+          ['France', 600],
+          ['RU', 700],
+          ['China', 10]
+        ]);
+
+        options = {
+          colorAxis: {colors: ['blue', 'green','yellow', 'red']},
+          displayMode: 'regions',
+          resolution: 'country'
+        };
+
+        chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+        google.visualization.events.addListener(chart, 'select', 
+          function(eventData) {
+            // maybe you want to change the data table here...
+            whereTheyClicked = chart.getSelection();  
+            var country =  data.getValue(whereTheyClicked[0].row, 0);
+            var text = 'You clicked: ' + country;
+            document.getElementById("rightconsole").innerHTML=text;
+        });
+      };
+
+    </script>
+  </head>
+  <body>
+
+    <div id='titlebar'>
+      <h1>Team Planeteers Present...</h1>
+    </div>
+    
+    <div id='searchbar'>
+      <div class="ui-widget">
+        <label for="tags">Country: </label>
+        <input id="tags" />
+        
+        <label for="animalTags">Animal: </label>
+        <input id="animalTags" />
+      </div>
+    </div>
+    
+    <div id="body">
+      <div id="rightconsole">
+      </div>
+
+      <div id="leftconsole" >
+        <div id="chart_div"></div>
+      </div>
+    </div>
+  
+  </body>
+</html>

@@ -1,0 +1,27 @@
+#body{
+}
+
+#titlebar {
+	font-size: medium;
+}
+
+#leftconsole {
+	border: 5px inset purple;
+	overflow: hidden;
+	padding-right: 20px;
+}
+
+#rightconsole{ 
+	width: 400px;
+	padding: 0px 20px 20px 20px;
+	margin-left: 20px;
+	float: right;
+	border: 5px inset purple;
+}
+
+#searchbar {
+    text-align: center;
+    margin: 10px;
+    font-size: 50%;
+    clear: left;
+}

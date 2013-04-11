@@ -1,0 +1,2048 @@
+rule: set(['ANURA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['Vulnerable', 'CHORDATA']) = 48/79 *100 = 0.607594936709 / support of set(['Vulnerable']) = 48/79*100 = 0.607594936709
+
+rule: set(['ALYTIDAE']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['CHORDATA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['CHORDATA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['CHORDATA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['Spain', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'Vulnerable']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Vulnerable', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'ALYTIDAE']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['CHORDATA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['CHORDATA', 'Spain'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'ALYTIDAE']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'Vulnerable', 'ALYTIDAE']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['CHORDATA', 'Spain', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['CHORDATA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'Vulnerable']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Vulnerable', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['Spain', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain', 'Vulnerable']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Vulnerable', 'Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['CHORDATA', 'Spain', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['CHORDATA', 'Spain'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Vulnerable', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['Spain', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain', 'Vulnerable']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['Vulnerable', 'Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['CHORDATA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Spain', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['Vulnerable', 'CHORDATA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['CHORDATA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['CHORDATA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'Spain']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'CHORDATA', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'Spain']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable']) -> frozenset(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable']) -> frozenset(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain']) -> frozenset(['AMPHIBIA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable']) -> frozenset(['AMPHIBIA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['ANURA', 'AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['ANURA', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain']) -> frozenset(['ALYTIDAE', 'Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable']) -> frozenset(['ALYTIDAE', 'Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ANURA', 'ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA']) -> frozenset(['AMPHIBIA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) -> frozenset(['Vulnerable', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain']) -> frozenset(['AMPHIBIA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) -> frozenset(['Spain', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) -> frozenset(['ANURA', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'Spain', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Spain']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) -> frozenset(['ALYTIDAE', 'Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain']) -> frozenset(['ALYTIDAE', 'CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ANURA', 'ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Spain', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Vulnerable'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Spain', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['AMPHIBIA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['Spain'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'CHORDATA', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'ALYTIDAE', 'Vulnerable', 'Spain', 'AMPHIBIA']) -> frozenset(['CHORDATA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'ALYTIDAE', 'Spain', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ALYTIDAE', 'Vulnerable', 'Spain', 'CHORDATA', 'AMPHIBIA']) -> frozenset(['ANURA'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ALYTIDAE', 'CHORDATA', 'Spain', 'Vulnerable', 'AMPHIBIA']) = 40/79*100 = 0.506329113924
+
+rule: set(['ANURA', 'AMPHIBIA', 'Vulnerable', 'Spain', 'CHORDATA']) -> frozenset(['ALYTIDAE'])
+confidence = 1.0 = 
+support of set(['ALYTIDAE', 'Spain', 'ANURA', 'AMPHIBIA', 'Vulnerable', 'CHORDATA']) = 40/79 *100 = 0.506329113924 / support of set(['ANURA', 'AMPHIBIA', 'CHORDATA', 'Spain', 'Vulnerable']) = 40/79*100 = 0.506329113924
+

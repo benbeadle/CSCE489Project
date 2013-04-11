@@ -1,0 +1,1897 @@
+{
+   "Canada":{
+      "Regionally extinct":14.0,
+      "Vagrant":65.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":4.0,
+      "Introduced":24.0,
+      "Native":1144.0
+   },
+   "Saint Martin":{
+      "Regionally extinct":2.0,
+      "Introduced":1.0,
+      "Vagrant":27.0,
+      "Present - origin uncertain":9.0,
+      "Native":177.0
+   },
+   "Sao Tome and Principe":{
+      "Introduced":6.0,
+      "Vagrant":37.0,
+      "Present - origin uncertain":14.0,
+      "Native":270.0
+   },
+   "Guernsey":{
+      "Introduced":3.0,
+      "Vagrant":1.0,
+      "Native":45.0
+   },
+   "Turkmenistan":{
+      "Regionally extinct":11.0,
+      "Vagrant":6.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":2.0,
+      "Introduced":6.0,
+      "Native":591.0
+   },
+   "Lithuania":{
+      "Regionally extinct":4.0,
+      "Reintroduced":1.0,
+      "Vagrant":17.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":1.0,
+      "Introduced":15.0,
+      "Native":491.0
+   },
+   "Cambodia":{
+      "Regionally extinct":4.0,
+      "Vagrant":12.0,
+      "Present - origin uncertain":18.0,
+      "Possibly extinct":3.0,
+      "Introduced":9.0,
+      "Native":1890.0
+   },
+   "Ethiopia":{
+      "Regionally extinct":1.0,
+      "Vagrant":26.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":5.0,
+      "Introduced":1.0,
+      "Native":1471.0
+   },
+   "Aruba":{
+      "Regionally extinct":2.0,
+      "Introduced":4.0,
+      "Vagrant":22.0,
+      "Native":336.0
+   },
+   "Sri Lanka":{
+      "Regionally extinct":22.0,
+      "Vagrant":90.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":15.0,
+      "Introduced":9.0,
+      "Native":1584.0
+   },
+   "Swaziland":{
+      "Regionally extinct":5.0,
+      "Reintroduced":8.0,
+      "Vagrant":33.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":3.0,
+      "Introduced":7.0,
+      "Native":755.0
+   },
+   "Argentina":{
+      "Regionally extinct":5.0,
+      "Vagrant":26.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":5.0,
+      "Introduced":23.0,
+      "Native":1884.0
+   },
+   "Cameroon":{
+      "Regionally extinct":2.0,
+      "Vagrant":56.0,
+      "Present - origin uncertain":10.0,
+      "Possibly extinct":3.0,
+      "Introduced":3.0,
+      "Native":2438.0
+   },
+   "Burkina Faso":{
+      "Regionally extinct":1.0,
+      "Vagrant":22.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":1.0,
+      "Introduced":2.0,
+      "Native":793.0
+   },
+   "Pitcairn":{
+      "Vagrant":1.0,
+      "Present - origin uncertain":20.0,
+      "Native":248.0
+   },
+   "Ghana":{
+      "Regionally extinct":4.0,
+      "Vagrant":57.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":4.0,
+      "Introduced":3.0,
+      "Native":1658.0
+   },
+   "Saudi Arabia":{
+      "Regionally extinct":5.0,
+      "Reintroduced":2.0,
+      "Vagrant":68.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":1.0,
+      "Introduced":8.0,
+      "Native":1197.0
+   },
+   "American Samoa":{
+      "Regionally extinct":1.0,
+      "Vagrant":4.0,
+      "Present - origin uncertain":24.0,
+      "Possibly extinct":3.0,
+      "Introduced":4.0,
+      "Native":651.0
+   },
+   "United States Minor Outlying Islands":{
+      "Regionally extinct":1.0,
+      "Vagrant":14.0,
+      "Present - origin uncertain":23.0,
+      "Possibly extinct":1.0,
+      "Introduced":5.0,
+      "Native":631.0
+   },
+   "Northern Mariana Islands":{
+      "Regionally extinct":1.0,
+      "Vagrant":23.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":5.0,
+      "Introduced":13.0,
+      "Native":719.0
+   },
+   "Slovenia":{
+      "Regionally extinct":8.0,
+      "Reintroduced":2.0,
+      "Vagrant":57.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":2.0,
+      "Introduced":11.0,
+      "Native":888.0
+   },
+   "Guatemala":{
+      "Regionally extinct":2.0,
+      "Vagrant":9.0,
+      "Present - origin uncertain":26.0,
+      "Possibly extinct":4.0,
+      "Introduced":3.0,
+      "Native":1882.0
+   },
+   "Zimbabwe":{
+      "Reintroduced":4.0,
+      "Vagrant":29.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":1.0,
+      "Introduced":8.0,
+      "Native":1258.0
+   },
+   "Bosnia and Herzegovina":{
+      "Regionally extinct":5.0,
+      "Vagrant":32.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":1.0,
+      "Introduced":7.0,
+      "Native":768.0
+   },
+   "Kuwait":{
+      "Regionally extinct":8.0,
+      "Vagrant":55.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":1.0,
+      "Introduced":8.0,
+      "Native":537.0
+   },
+   "Russian Federation":{
+      "Regionally extinct":10.0,
+      "Vagrant":99.0,
+      "Present - origin uncertain":10.0,
+      "Possibly extinct":5.0,
+      "Introduced":16.0,
+      "Native":2315.0
+   },
+   "Germany":{
+      "Regionally extinct":21.0,
+      "Reintroduced":3.0,
+      "Vagrant":172.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":6.0,
+      "Introduced":46.0,
+      "Native":875.0
+   },
+   "Saint Barthelemy":{
+      "Regionally extinct":1.0,
+      "Native":87.0
+   },
+   "Spain":{
+      "Regionally extinct":5.0,
+      "Reintroduced":1.0,
+      "Vagrant":228.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":9.0,
+      "Introduced":49.0,
+      "Native":1788.0
+   },
+   "Liberia":{
+      "Possibly extinct":1.0,
+      "Introduced":3.0,
+      "Vagrant":48.0,
+      "Present - origin uncertain":7.0,
+      "Native":1299.0
+   },
+   "Netherlands":{
+      "Regionally extinct":11.0,
+      "Reintroduced":3.0,
+      "Vagrant":168.0,
+      "Present - origin uncertain":1.0,
+      "Introduced":37.0,
+      "Native":598.0
+   },
+   "Jamaica":{
+      "Regionally extinct":8.0,
+      "Vagrant":112.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":4.0,
+      "Introduced":19.0,
+      "Native":532.0
+   },
+   "Oman":{
+      "Regionally extinct":2.0,
+      "Reintroduced":1.0,
+      "Vagrant":147.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":1.0,
+      "Introduced":9.0,
+      "Native":963.0
+   },
+   "Seychelles":{
+      "Regionally extinct":10.0,
+      "Vagrant":121.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":11.0,
+      "Introduced":18.0,
+      "Native":933.0
+   },
+   "Gabon":{
+      "Regionally extinct":1.0,
+      "Vagrant":42.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":2.0,
+      "Introduced":5.0,
+      "Native":1510.0
+   },
+   "Niue":{
+      "Regionally extinct":1.0,
+      "Introduced":2.0,
+      "Vagrant":3.0,
+      "Present - origin uncertain":26.0,
+      "Native":428.0
+   },
+   "Monaco":{
+      "Introduced":1.0,
+      "Present - origin uncertain":13.0,
+      "Native":194.0
+   },
+   "Wallis and Futuna":{
+      "Introduced":3.0,
+      "Present - origin uncertain":23.0,
+      "Native":614.0
+   },
+   "New Zealand":{
+      "Regionally extinct":21.0,
+      "Vagrant":92.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":1.0,
+      "Introduced":63.0,
+      "Native":563.0
+   },
+   "Yemen":{
+      "Regionally extinct":5.0,
+      "Vagrant":71.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":1.0,
+      "Introduced":3.0,
+      "Native":1264.0
+   },
+   "Jersey":{
+      "Introduced":3.0,
+      "Vagrant":1.0,
+      "Native":54.0
+   },
+   "Bahamas":{
+      "Regionally extinct":7.0,
+      "Introduced":14.0,
+      "Vagrant":40.0,
+      "Present - origin uncertain":9.0,
+      "Native":624.0
+   },
+   "Namibia":{
+      "Regionally extinct":2.0,
+      "Reintroduced":1.0,
+      "Vagrant":38.0,
+      "Present - origin uncertain":9.0,
+      "Introduced":7.0,
+      "Native":1291.0
+   },
+   "Albania":{
+      "Regionally extinct":3.0,
+      "Vagrant":11.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":5.0,
+      "Introduced":10.0,
+      "Native":870.0
+   },
+   "Samoa":{
+      "Possibly extinct":3.0,
+      "Introduced":7.0,
+      "Vagrant":5.0,
+      "Present - origin uncertain":31.0,
+      "Native":708.0
+   },
+   "Norfolk Island":{
+      "Regionally extinct":12.0,
+      "Introduced":2.0,
+      "Vagrant":5.0,
+      "Present - origin uncertain":33.0,
+      "Native":217.0
+   },
+   "United Arab Emirates":{
+      "Regionally extinct":2.0,
+      "Vagrant":119.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":2.0,
+      "Introduced":17.0,
+      "Native":630.0
+   },
+   "Guam":{
+      "Regionally extinct":13.0,
+      "Vagrant":16.0,
+      "Present - origin uncertain":10.0,
+      "Possibly extinct":3.0,
+      "Introduced":20.0,
+      "Native":463.0
+   },
+   "India":{
+      "Regionally extinct":7.0,
+      "Vagrant":49.0,
+      "Present - origin uncertain":12.0,
+      "Possibly extinct":12.0,
+      "Introduced":4.0,
+      "Native":4281.0
+   },
+   "Azerbaijan":{
+      "Regionally extinct":3.0,
+      "Vagrant":3.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":1.0,
+      "Introduced":6.0,
+      "Native":645.0
+   },
+   "Lesotho":{
+      "Regionally extinct":5.0,
+      "Reintroduced":1.0,
+      "Vagrant":66.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":2.0,
+      "Introduced":3.0,
+      "Native":374.0
+   },
+   "Saint Vincent and the Grenadines":{
+      "Regionally extinct":2.0,
+      "Introduced":4.0,
+      "Vagrant":27.0,
+      "Present - origin uncertain":3.0,
+      "Native":468.0
+   },
+   "Kenya":{
+      "Regionally extinct":5.0,
+      "Reintroduced":1.0,
+      "Vagrant":61.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":16.0,
+      "Introduced":13.0,
+      "Native":2709.0
+   },
+   "Tajikistan":{
+      "Regionally extinct":3.0,
+      "Vagrant":24.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":3.0,
+      "Introduced":3.0,
+      "Native":448.0
+   },
+   "Ascension and Tristan da Cunha Saint Helena":{
+      "Regionally extinct":27.0,
+      "Introduced":12.0,
+      "Vagrant":46.0,
+      "Present - origin uncertain":9.0,
+      "Native":139.0
+   },
+   "Turkey":{
+      "Regionally extinct":9.0,
+      "Reintroduced":1.0,
+      "Vagrant":57.0,
+      "Possibly extinct":5.0,
+      "Introduced":11.0,
+      "Native":1141.0
+   },
+   "Afghanistan":{
+      "Regionally extinct":3.0,
+      "Vagrant":63.0,
+      "Present - origin uncertain":57.0,
+      "Possibly extinct":2.0,
+      "Introduced":5.0,
+      "Native":595.0
+   },
+   "Czech Republic":{
+      "Regionally extinct":7.0,
+      "Reintroduced":1.0,
+      "Vagrant":89.0,
+      "Present - origin uncertain":2.0,
+      "Introduced":30.0,
+      "Native":652.0
+   },
+   "Mauritania":{
+      "Possibly extinct":2.0,
+      "Regionally extinct":8.0,
+      "Vagrant":66.0,
+      "Present - origin uncertain":4.0,
+      "Native":822.0
+   },
+   "Solomon Islands":{
+      "Regionally extinct":2.0,
+      "Vagrant":13.0,
+      "Present - origin uncertain":18.0,
+      "Possibly extinct":5.0,
+      "Introduced":5.0,
+      "Native":1339.0
+   },
+   "Viet Nam":{
+      "Regionally extinct":4.0,
+      "Reintroduced":1.0,
+      "Vagrant":24.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":13.0,
+      "Introduced":8.0,
+      "Native":3254.0
+   },
+   "Saint Lucia":{
+      "Regionally extinct":3.0,
+      "Introduced":4.0,
+      "Vagrant":28.0,
+      "Present - origin uncertain":6.0,
+      "Native":476.0
+   },
+   "Dominica":{
+      "Regionally extinct":2.0,
+      "Introduced":5.0,
+      "Vagrant":30.0,
+      "Present - origin uncertain":5.0,
+      "Native":493.0
+   },
+   "San Marino":{
+      "Regionally extinct":1.0,
+      "Introduced":2.0,
+      "Present - origin uncertain":4.0,
+      "Native":58.0
+   },
+   "The Democratic Republic of the Congo":{
+      "Regionally extinct":1.0,
+      "Vagrant":37.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":7.0,
+      "Introduced":4.0,
+      "Native":3520.0
+   },
+   "French Polynesia":{
+      "Regionally extinct":82.0,
+      "Vagrant":28.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":2.0,
+      "Introduced":12.0,
+      "Native":674.0
+   },
+   "France":{
+      "Regionally extinct":11.0,
+      "Reintroduced":3.0,
+      "Vagrant":164.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":7.0,
+      "Introduced":54.0,
+      "Native":1446.0
+   },
+   "Syrian Arab Republic":{
+      "Regionally extinct":15.0,
+      "Vagrant":41.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":3.0,
+      "Introduced":4.0,
+      "Native":703.0
+   },
+   "Rwanda":{
+      "Regionally extinct":6.0,
+      "Vagrant":44.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":2.0,
+      "Introduced":5.0,
+      "Native":941.0
+   },
+   "Slovakia":{
+      "Regionally extinct":6.0,
+      "Reintroduced":1.0,
+      "Vagrant":51.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":2.0,
+      "Introduced":17.0,
+      "Native":681.0
+   },
+   "Somalia":{
+      "Regionally extinct":3.0,
+      "Introduced":4.0,
+      "Vagrant":82.0,
+      "Present - origin uncertain":12.0,
+      "Native":1627.0
+   },
+   "Peru":{
+      "Regionally extinct":3.0,
+      "Vagrant":11.0,
+      "Present - origin uncertain":24.0,
+      "Possibly extinct":5.0,
+      "Introduced":5.0,
+      "Native":3520.0
+   },
+   "Vanuatu":{
+      "Regionally extinct":4.0,
+      "Vagrant":16.0,
+      "Present - origin uncertain":21.0,
+      "Possibly extinct":2.0,
+      "Introduced":8.0,
+      "Native":938.0
+   },
+   "Nauru":{
+      "Possibly extinct":1.0,
+      "Introduced":4.0,
+      "Vagrant":7.0,
+      "Present - origin uncertain":27.0,
+      "Native":566.0
+   },
+   "Norway":{
+      "Regionally extinct":2.0,
+      "Vagrant":183.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":1.0,
+      "Introduced":11.0,
+      "Native":574.0
+   },
+   "Malawi":{
+      "Regionally extinct":1.0,
+      "Reintroduced":1.0,
+      "Vagrant":23.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":1.0,
+      "Introduced":1.0,
+      "Native":1566.0
+   },
+   "Cook Islands":{
+      "Regionally extinct":15.0,
+      "Introduced":6.0,
+      "Vagrant":7.0,
+      "Present - origin uncertain":25.0,
+      "Native":489.0
+   },
+   "Benin":{
+      "Possibly extinct":2.0,
+      "Introduced":4.0,
+      "Vagrant":12.0,
+      "Present - origin uncertain":23.0,
+      "Native":1154.0
+   },
+   "Sint Eustatius and Saba Bonaire":{
+      "Introduced":5.0,
+      "Vagrant":20.0,
+      "Present - origin uncertain":3.0,
+      "Native":245.0
+   },
+   "Federated States of Micronesia":{
+      "Regionally extinct":2.0,
+      "Vagrant":11.0,
+      "Present - origin uncertain":20.0,
+      "Possibly extinct":1.0,
+      "Introduced":10.0,
+      "Native":1034.0
+   },
+   "Libya":{
+      "Regionally extinct":7.0,
+      "Vagrant":61.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":2.0,
+      "Introduced":1.0,
+      "Native":541.0
+   },
+   "Singapore":{
+      "Regionally extinct":65.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":7.0,
+      "Possibly extinct":4.0,
+      "Introduced":55.0,
+      "Native":1496.0
+   },
+   "Montenegro":{
+      "Regionally extinct":5.0,
+      "Reintroduced":1.0,
+      "Vagrant":67.0,
+      "Present - origin uncertain":7.0,
+      "Possibly extinct":5.0,
+      "Introduced":6.0,
+      "Native":801.0
+   },
+   "Saint Kitts and Nevis":{
+      "Regionally extinct":6.0,
+      "Vagrant":26.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":1.0,
+      "Introduced":8.0,
+      "Native":453.0
+   },
+   "Togo":{
+      "Regionally extinct":1.0,
+      "Vagrant":39.0,
+      "Present - origin uncertain":12.0,
+      "Possibly extinct":9.0,
+      "Introduced":6.0,
+      "Native":1216.0
+   },
+   "Heard Island and McDonald Islands":{
+      "Vagrant":7.0,
+      "Present - origin uncertain":20.0,
+      "Native":43.0
+   },
+   "China":{
+      "Regionally extinct":10.0,
+      "Vagrant":33.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":29.0,
+      "Introduced":13.0,
+      "Native":4014.0
+   },
+   "Armenia":{
+      "Regionally extinct":2.0,
+      "Introduced":9.0,
+      "Vagrant":11.0,
+      "Native":502.0
+   },
+   "Bahrain":{
+      "Regionally extinct":1.0,
+      "Introduced":16.0,
+      "Vagrant":77.0,
+      "Present - origin uncertain":2.0,
+      "Native":452.0
+   },
+   "Republic of Korea":{
+      "Regionally extinct":4.0,
+      "Vagrant":57.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":1.0,
+      "Introduced":4.0,
+      "Native":705.0
+   },
+   "Dominican Republic":{
+      "Regionally extinct":9.0,
+      "Vagrant":35.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":3.0,
+      "Introduced":20.0,
+      "Native":629.0
+   },
+   "Mongolia":{
+      "Reintroduced":1.0,
+      "Introduced":2.0,
+      "Vagrant":40.0,
+      "Present - origin uncertain":2.0,
+      "Native":561.0
+   },
+   "Ukraine":{
+      "Regionally extinct":12.0,
+      "Reintroduced":2.0,
+      "Vagrant":33.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":4.0,
+      "Introduced":19.0,
+      "Native":840.0
+   },
+   "the former Yugoslav Republic of Macedonia":{
+      "Regionally extinct":5.0,
+      "Vagrant":12.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":4.0,
+      "Introduced":5.0,
+      "Native":731.0
+   },
+   "Tonga":{
+      "Regionally extinct":2.0,
+      "Vagrant":1.0,
+      "Present - origin uncertain":28.0,
+      "Possibly extinct":3.0,
+      "Introduced":9.0,
+      "Native":645.0
+   },
+   "Indonesia":{
+      "Regionally extinct":2.0,
+      "Vagrant":37.0,
+      "Present - origin uncertain":7.0,
+      "Possibly extinct":8.0,
+      "Introduced":23.0,
+      "Native":5334.0
+   },
+   "Western Sahara":{
+      "Regionally extinct":3.0,
+      "Vagrant":10.0,
+      "Present - origin uncertain":23.0,
+      "Possibly extinct":4.0,
+      "Introduced":1.0,
+      "Native":377.0
+   },
+   "Finland":{
+      "Regionally extinct":1.0,
+      "Reintroduced":1.0,
+      "Vagrant":160.0,
+      "Present - origin uncertain":1.0,
+      "Introduced":13.0,
+      "Native":508.0
+   },
+   "Central African Republic":{
+      "Regionally extinct":1.0,
+      "Vagrant":12.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":1.0,
+      "Introduced":1.0,
+      "Native":1421.0
+   },
+   "United States":{
+      "Regionally extinct":241.0,
+      "Reintroduced":5.0,
+      "Vagrant":93.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":36.0,
+      "Introduced":133.0,
+      "Native":4326.0
+   },
+   "Liechtenstein":{
+      "Regionally extinct":6.0,
+      "Reintroduced":1.0,
+      "Vagrant":63.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":1.0,
+      "Introduced":6.0,
+      "Native":361.0
+   },
+   "Australia":{
+      "Regionally extinct":40.0,
+      "Vagrant":91.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":8.0,
+      "Introduced":44.0,
+      "Native":3967.0
+   },
+   "Occupied Palestinian Territory":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":5.0,
+      "Vagrant":13.0,
+      "Present - origin uncertain":4.0,
+      "Native":334.0
+   },
+   "Mali":{
+      "Possibly extinct":4.0,
+      "Regionally extinct":2.0,
+      "Vagrant":50.0,
+      "Present - origin uncertain":6.0,
+      "Native":947.0
+   },
+   "Bulgaria":{
+      "Regionally extinct":5.0,
+      "Vagrant":67.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":1.0,
+      "Introduced":12.0,
+      "Native":857.0
+   },
+   "Mauritius":{
+      "Regionally extinct":46.0,
+      "Introduced":32.0,
+      "Vagrant":36.0,
+      "Present - origin uncertain":7.0,
+      "Native":811.0
+   },
+   "Romania":{
+      "Regionally extinct":8.0,
+      "Reintroduced":2.0,
+      "Vagrant":40.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":7.0,
+      "Introduced":14.0,
+      "Native":835.0
+   },
+   "Angola":{
+      "Possibly extinct":5.0,
+      "Introduced":2.0,
+      "Vagrant":28.0,
+      "Present - origin uncertain":14.0,
+      "Native":2048.0
+   },
+   "French Southern Territories":{
+      "Regionally extinct":2.0,
+      "Vagrant":14.0,
+      "Present - origin uncertain":39.0,
+      "Native":147.0
+   },
+   "Portugal":{
+      "Regionally extinct":8.0,
+      "Reintroduced":2.0,
+      "Vagrant":175.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":12.0,
+      "Introduced":33.0,
+      "Native":971.0
+   },
+   "South Africa":{
+      "Regionally extinct":8.0,
+      "Vagrant":60.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":3.0,
+      "Introduced":22.0,
+      "Native":2453.0
+   },
+   "Tokelau":{
+      "Introduced":2.0,
+      "Present - origin uncertain":31.0,
+      "Native":419.0
+   },
+   "Nicaragua":{
+      "Introduced":3.0,
+      "Vagrant":7.0,
+      "Present - origin uncertain":30.0,
+      "Native":1904.0
+   },
+   "Christmas Island":{
+      "Regionally extinct":2.0,
+      "Vagrant":39.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":2.0,
+      "Introduced":3.0,
+      "Native":393.0
+   },
+   "South Georgia and the South Sandwich Islands":{
+      "Introduced":1.0,
+      "Vagrant":31.0,
+      "Present - origin uncertain":12.0,
+      "Native":105.0
+   },
+   "Sweden":{
+      "Regionally extinct":5.0,
+      "Reintroduced":4.0,
+      "Vagrant":171.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":1.0,
+      "Introduced":17.0,
+      "Native":604.0
+   },
+   "Qatar":{
+      "Regionally extinct":1.0,
+      "Vagrant":42.0,
+      "Present - origin uncertain":7.0,
+      "Possibly extinct":1.0,
+      "Introduced":10.0,
+      "Native":457.0
+   },
+   "Malaysia":{
+      "Regionally extinct":5.0,
+      "Vagrant":44.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":10.0,
+      "Introduced":22.0,
+      "Native":3343.0
+   },
+   "Austria":{
+      "Regionally extinct":16.0,
+      "Reintroduced":3.0,
+      "Vagrant":97.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":5.0,
+      "Introduced":28.0,
+      "Native":817.0
+   },
+   "Mozambique":{
+      "Regionally extinct":1.0,
+      "Reintroduced":1.0,
+      "Vagrant":21.0,
+      "Present - origin uncertain":17.0,
+      "Introduced":5.0,
+      "Native":2295.0
+   },
+   "Uganda":{
+      "Regionally extinct":5.0,
+      "Reintroduced":1.0,
+      "Vagrant":25.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":31.0,
+      "Introduced":4.0,
+      "Native":1972.0
+   },
+   "Hungary":{
+      "Regionally extinct":12.0,
+      "Reintroduced":1.0,
+      "Vagrant":81.0,
+      "Possibly extinct":2.0,
+      "Introduced":21.0,
+      "Native":654.0
+   },
+   "Niger":{
+      "Regionally extinct":2.0,
+      "Vagrant":64.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":1.0,
+      "Introduced":2.0,
+      "Native":738.0
+   },
+   "Isle of Man":{
+      "Introduced":3.0,
+      "Vagrant":1.0,
+      "Native":30.0
+   },
+   "Brazil":{
+      "Regionally extinct":10.0,
+      "Vagrant":40.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":8.0,
+      "Introduced":12.0,
+      "Native":4121.0
+   },
+   "Falkland Islands":{
+      "Regionally extinct":1.0,
+      "Introduced":5.0,
+      "Vagrant":61.0,
+      "Present - origin uncertain":11.0,
+      "Native":186.0
+   },
+   "U.S. Virgin Islands":{
+      "Regionally extinct":4.0,
+      "Vagrant":85.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":1.0,
+      "Introduced":13.0,
+      "Native":339.0
+   },
+   "Guinea":{
+      "Regionally extinct":2.0,
+      "Vagrant":12.0,
+      "Present - origin uncertain":19.0,
+      "Possibly extinct":2.0,
+      "Introduced":2.0,
+      "Native":1577.0
+   },
+   "Panama":{
+      "Possibly extinct":7.0,
+      "Introduced":8.0,
+      "Vagrant":89.0,
+      "Present - origin uncertain":6.0,
+      "Native":2408.0
+   },
+   "Guyana":{
+      "Introduced":3.0,
+      "Vagrant":2.0,
+      "Present - origin uncertain":9.0,
+      "Native":1440.0
+   },
+   "Costa Rica":{
+      "Regionally extinct":5.0,
+      "Vagrant":20.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":16.0,
+      "Introduced":9.0,
+      "Native":2353.0
+   },
+   "Luxembourg":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":7.0,
+      "Introduced":15.0,
+      "Vagrant":98.0,
+      "Native":389.0
+   },
+   "Cape Verde":{
+      "Regionally extinct":3.0,
+      "Introduced":6.0,
+      "Vagrant":57.0,
+      "Present - origin uncertain":2.0,
+      "Native":281.0
+   },
+   "Andorra":{
+      "Regionally extinct":1.0,
+      "Reintroduced":1.0,
+      "Vagrant":3.0,
+      "Present - origin uncertain":3.0,
+      "Introduced":4.0,
+      "Native":283.0
+   },
+   "British Virgin Islands":{
+      "Regionally extinct":2.0,
+      "Reintroduced":1.0,
+      "Vagrant":29.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":1.0,
+      "Introduced":7.0,
+      "Native":397.0
+   },
+   "Gibraltar":{
+      "Regionally extinct":3.0,
+      "Vagrant":116.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":1.0,
+      "Introduced":6.0,
+      "Native":329.0
+   },
+   "Ireland":{
+      "Regionally extinct":9.0,
+      "Introduced":13.0,
+      "Vagrant":197.0,
+      "Present - origin uncertain":1.0,
+      "Native":455.0
+   },
+   "Pakistan":{
+      "Regionally extinct":8.0,
+      "Vagrant":32.0,
+      "Present - origin uncertain":17.0,
+      "Possibly extinct":7.0,
+      "Introduced":5.0,
+      "Native":1272.0
+   },
+   "Palau":{
+      "Regionally extinct":2.0,
+      "Vagrant":32.0,
+      "Present - origin uncertain":18.0,
+      "Possibly extinct":13.0,
+      "Introduced":12.0,
+      "Native":1097.0
+   },
+   "Nigeria":{
+      "Regionally extinct":3.0,
+      "Vagrant":48.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":6.0,
+      "Introduced":2.0,
+      "Native":2031.0
+   },
+   "Ecuador":{
+      "Regionally extinct":7.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":37.0,
+      "Possibly extinct":35.0,
+      "Introduced":10.0,
+      "Native":3422.0
+   },
+   "Bangladesh":{
+      "Regionally extinct":19.0,
+      "Vagrant":41.0,
+      "Present - origin uncertain":14.0,
+      "Possibly extinct":13.0,
+      "Introduced":4.0,
+      "Native":1299.0
+   },
+   "Belarus":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":6.0,
+      "Introduced":11.0,
+      "Vagrant":47.0,
+      "Native":479.0
+   },
+   "Algeria":{
+      "Regionally extinct":12.0,
+      "Vagrant":61.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":12.0,
+      "Introduced":7.0,
+      "Native":766.0
+   },
+   "El Salvador":{
+      "Regionally extinct":4.0,
+      "Vagrant":1.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":1.0,
+      "Introduced":4.0,
+      "Native":1341.0
+   },
+   "Tuvalu":{
+      "Introduced":2.0,
+      "Vagrant":2.0,
+      "Present - origin uncertain":31.0,
+      "Native":614.0
+   },
+   "Gambia":{
+      "Regionally extinct":11.0,
+      "Vagrant":83.0,
+      "Present - origin uncertain":12.0,
+      "Possibly extinct":3.0,
+      "Introduced":2.0,
+      "Native":920.0
+   },
+   "Saint Pierre and Miquelon":{
+      "Introduced":4.0,
+      "Vagrant":106.0,
+      "Present - origin uncertain":1.0,
+      "Native":220.0
+   },
+   "Marshall Islands":{
+      "Regionally extinct":1.0,
+      "Introduced":6.0,
+      "Vagrant":25.0,
+      "Present - origin uncertain":13.0,
+      "Native":744.0
+   },
+   "Chile":{
+      "Regionally extinct":1.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":21.0,
+      "Possibly extinct":2.0,
+      "Introduced":17.0,
+      "Native":1124.0
+   },
+   "Puerto Rico":{
+      "Regionally extinct":6.0,
+      "Vagrant":39.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":4.0,
+      "Introduced":55.0,
+      "Native":534.0
+   },
+   "Belgium":{
+      "Regionally extinct":9.0,
+      "Reintroduced":2.0,
+      "Vagrant":156.0,
+      "Possibly extinct":2.0,
+      "Introduced":32.0,
+      "Native":587.0
+   },
+   "Thailand":{
+      "Regionally extinct":14.0,
+      "Reintroduced":1.0,
+      "Vagrant":40.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":9.0,
+      "Introduced":15.0,
+      "Native":3860.0
+   },
+   "Haiti":{
+      "Regionally extinct":11.0,
+      "Vagrant":17.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":4.0,
+      "Introduced":8.0,
+      "Native":629.0
+   },
+   "Belize":{
+      "Possibly extinct":1.0,
+      "Introduced":6.0,
+      "Vagrant":30.0,
+      "Present - origin uncertain":4.0,
+      "Native":1080.0
+   },
+   "Hong Kong":{
+      "Regionally extinct":4.0,
+      "Introduced":16.0,
+      "Vagrant":106.0,
+      "Present - origin uncertain":3.0,
+      "Native":653.0
+   },
+   "Sierra Leone":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":3.0,
+      "Vagrant":50.0,
+      "Present - origin uncertain":10.0,
+      "Native":1345.0
+   },
+   "Georgia":{
+      "Regionally extinct":5.0,
+      "Introduced":6.0,
+      "Vagrant":7.0,
+      "Present - origin uncertain":3.0,
+      "Native":558.0
+   },
+   "Lao People's Democratic Republic":{
+      "Regionally extinct":5.0,
+      "Vagrant":21.0,
+      "Present - origin uncertain":12.0,
+      "Possibly extinct":3.0,
+      "Introduced":10.0,
+      "Native":1861.0
+   },
+   "Denmark":{
+      "Regionally extinct":9.0,
+      "Reintroduced":1.0,
+      "Introduced":18.0,
+      "Vagrant":185.0,
+      "Native":567.0
+   },
+   "Philippines":{
+      "Regionally extinct":3.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":17.0,
+      "Possibly extinct":5.0,
+      "Introduced":34.0,
+      "Native":2786.0
+   },
+   "Cocos":{
+      "Introduced":4.0,
+      "Vagrant":15.0,
+      "Present - origin uncertain":7.0,
+      "Native":357.0
+   },
+   "Moldova":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":9.0,
+      "Introduced":9.0,
+      "Vagrant":4.0,
+      "Native":449.0
+   },
+   "French Guiana":{
+      "Introduced":3.0,
+      "Vagrant":7.0,
+      "Present - origin uncertain":7.0,
+      "Native":1277.0
+   },
+   "Morocco":{
+      "Regionally extinct":10.0,
+      "Reintroduced":2.0,
+      "Vagrant":94.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":2.0,
+      "Introduced":9.0,
+      "Native":879.0
+   },
+   "Croatia":{
+      "Regionally extinct":10.0,
+      "Reintroduced":1.0,
+      "Vagrant":58.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":6.0,
+      "Introduced":9.0,
+      "Native":1010.0
+   },
+   "Malta":{
+      "Regionally extinct":2.0,
+      "Vagrant":155.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":2.0,
+      "Introduced":5.0,
+      "Native":391.0
+   },
+   "Guinea-Bissau":{
+      "Regionally extinct":1.0,
+      "Vagrant":8.0,
+      "Present - origin uncertain":27.0,
+      "Possibly extinct":2.0,
+      "Introduced":2.0,
+      "Native":940.0
+   },
+   "United Republic of Tanzania":{
+      "Regionally extinct":3.0,
+      "Vagrant":16.0,
+      "Present - origin uncertain":10.0,
+      "Possibly extinct":45.0,
+      "Introduced":8.0,
+      "Native":3411.0
+   },
+   "Switzerland":{
+      "Regionally extinct":22.0,
+      "Reintroduced":3.0,
+      "Vagrant":92.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":1.0,
+      "Introduced":26.0,
+      "Native":730.0
+   },
+   "Grenada":{
+      "Regionally extinct":1.0,
+      "Vagrant":35.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":2.0,
+      "Introduced":4.0,
+      "Native":384.0
+   },
+   "Iraq":{
+      "Regionally extinct":7.0,
+      "Vagrant":20.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":1.0,
+      "Introduced":5.0,
+      "Native":723.0
+   },
+   "Chad":{
+      "Regionally extinct":3.0,
+      "Vagrant":28.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":1.0,
+      "Introduced":1.0,
+      "Native":848.0
+   },
+   "Estonia":{
+      "Regionally extinct":3.0,
+      "Reintroduced":1.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":1.0,
+      "Introduced":10.0,
+      "Native":473.0
+   },
+   "Uruguay":{
+      "Regionally extinct":5.0,
+      "Vagrant":31.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":1.0,
+      "Introduced":15.0,
+      "Native":712.0
+   },
+   "Equatorial Guinea":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":3.0,
+      "Vagrant":13.0,
+      "Present - origin uncertain":20.0,
+      "Native":1081.0
+   },
+   "Lebanon":{
+      "Regionally extinct":11.0,
+      "Vagrant":78.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":2.0,
+      "Introduced":6.0,
+      "Native":568.0
+   },
+   "Faroe Islands":{
+      "Regionally extinct":2.0,
+      "Introduced":6.0,
+      "Vagrant":131.0,
+      "Present - origin uncertain":4.0,
+      "Native":187.0
+   },
+   "Svalbard and Jan Mayen":{
+      "Introduced":2.0,
+      "Vagrant":92.0,
+      "Native":79.0
+   },
+   "Uzbekistan":{
+      "Regionally extinct":2.0,
+      "Reintroduced":1.0,
+      "Vagrant":11.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":7.0,
+      "Introduced":13.0,
+      "Native":494.0
+   },
+   "Tunisia":{
+      "Regionally extinct":23.0,
+      "Reintroduced":2.0,
+      "Vagrant":61.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":4.0,
+      "Introduced":2.0,
+      "Native":662.0
+   },
+   "Djibouti":{
+      "Regionally extinct":3.0,
+      "Vagrant":47.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":3.0,
+      "Introduced":4.0,
+      "Native":960.0
+   },
+   "Bermuda":{
+      "Reintroduced":1.0,
+      "Introduced":15.0,
+      "Vagrant":120.0,
+      "Native":356.0
+   },
+   "Antigua and Barbuda":{
+      "Regionally extinct":4.0,
+      "Introduced":5.0,
+      "Vagrant":38.0,
+      "Present - origin uncertain":8.0,
+      "Native":475.0
+   },
+   "Plurinational States of Bolivia":{
+      "Possibly extinct":4.0,
+      "Introduced":4.0,
+      "Vagrant":2.0,
+      "Native":2180.0
+   },
+   "Colombia":{
+      "Regionally extinct":3.0,
+      "Vagrant":16.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":13.0,
+      "Introduced":10.0,
+      "Native":4220.0
+   },
+   "Reunion":{
+      "Regionally extinct":17.0,
+      "Introduced":29.0,
+      "Vagrant":11.0,
+      "Present - origin uncertain":10.0,
+      "Native":680.0
+   },
+   "Burundi":{
+      "Regionally extinct":7.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":3.0,
+      "Introduced":4.0,
+      "Native":1112.0
+   },
+   "Cyprus":{
+      "Regionally extinct":5.0,
+      "Introduced":10.0,
+      "Vagrant":82.0,
+      "Present - origin uncertain":3.0,
+      "Native":512.0
+   },
+   "Barbados":{
+      "Regionally extinct":3.0,
+      "Introduced":7.0,
+      "Vagrant":65.0,
+      "Present - origin uncertain":1.0,
+      "Native":475.0
+   },
+   "Timor-Leste":{
+      "Introduced":7.0,
+      "Vagrant":12.0,
+      "Present - origin uncertain":9.0,
+      "Native":422.0
+   },
+   "Madagascar":{
+      "Regionally extinct":11.0,
+      "Vagrant":17.0,
+      "Present - origin uncertain":12.0,
+      "Possibly extinct":6.0,
+      "Introduced":16.0,
+      "Native":2103.0
+   },
+   "Italy":{
+      "Regionally extinct":10.0,
+      "Reintroduced":2.0,
+      "Vagrant":124.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":3.0,
+      "Introduced":45.0,
+      "Native":1406.0
+   },
+   "Suriname":{
+      "Introduced":3.0,
+      "Vagrant":3.0,
+      "Present - origin uncertain":10.0,
+      "Native":1283.0
+   },
+   "Bhutan":{
+      "Regionally extinct":3.0,
+      "Vagrant":33.0,
+      "Present - origin uncertain":12.0,
+      "Possibly extinct":4.0,
+      "Introduced":2.0,
+      "Native":777.0
+   },
+   "Sudan":{
+      "Regionally extinct":3.0,
+      "Vagrant":30.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":3.0,
+      "Introduced":5.0,
+      "Native":2017.0
+   },
+   "Democratic People's Republic of Korea":{
+      "Regionally extinct":2.0,
+      "Vagrant":35.0,
+      "Present - origin uncertain":7.0,
+      "Possibly extinct":3.0,
+      "Introduced":4.0,
+      "Native":603.0
+   },
+   "Nepal":{
+      "Regionally extinct":10.0,
+      "Introduced":4.0,
+      "Vagrant":49.0,
+      "Present - origin uncertain":2.0,
+      "Native":1451.0
+   },
+   "Kiribati":{
+      "Regionally extinct":2.0,
+      "Vagrant":13.0,
+      "Present - origin uncertain":26.0,
+      "Possibly extinct":1.0,
+      "Introduced":4.0,
+      "Native":681.0
+   },
+   "Mayotte":{
+      "Regionally extinct":5.0,
+      "Vagrant":2.0,
+      "Present - origin uncertain":8.0,
+      "Possibly extinct":1.0,
+      "Introduced":6.0,
+      "Native":613.0
+   },
+   "Brunei Darussalam":{
+      "Regionally extinct":5.0,
+      "Introduced":10.0,
+      "Vagrant":48.0,
+      "Native":974.0
+   },
+   "Maldives":{
+      "Possibly extinct":1.0,
+      "Introduced":6.0,
+      "Vagrant":73.0,
+      "Present - origin uncertain":4.0,
+      "Native":675.0
+   },
+   "Province of China Taiwan":{
+      "Regionally extinct":4.0,
+      "Reintroduced":1.0,
+      "Vagrant":55.0,
+      "Present - origin uncertain":10.0,
+      "Possibly extinct":3.0,
+      "Introduced":16.0,
+      "Native":1958.0
+   },
+   "Cayman Islands":{
+      "Regionally extinct":2.0,
+      "Introduced":8.0,
+      "Vagrant":30.0,
+      "Present - origin uncertain":6.0,
+      "Native":474.0
+   },
+   "Anguilla":{
+      "Regionally extinct":3.0,
+      "Vagrant":18.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":1.0,
+      "Introduced":4.0,
+      "Native":356.0
+   },
+   "Venezuela":{
+      "Regionally extinct":3.0,
+      "Vagrant":13.0,
+      "Present - origin uncertain":7.0,
+      "Possibly extinct":8.0,
+      "Introduced":12.0,
+      "Native":2642.0
+   },
+   "Turks and Caicos Islands":{
+      "Regionally extinct":1.0,
+      "Vagrant":22.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":1.0,
+      "Introduced":5.0,
+      "Native":449.0
+   },
+   "Netherlands Antilles":{
+      "Regionally extinct":2.0,
+      "Introduced":1.0,
+      "Native":247.0
+   },
+   "Aland Islands":{
+      "Introduced":1.0,
+      "Native":1.0
+   },
+   "Israel":{
+      "Regionally extinct":16.0,
+      "Reintroduced":4.0,
+      "Vagrant":134.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":6.0,
+      "Introduced":10.0,
+      "Native":1209.0
+   },
+   "Bouvet Island":{
+      "Regionally extinct":1.0,
+      "Vagrant":4.0,
+      "Present - origin uncertain":21.0,
+      "Native":21.0
+   },
+   "Iceland":{
+      "Regionally extinct":2.0,
+      "Introduced":5.0,
+      "Vagrant":195.0,
+      "Present - origin uncertain":2.0,
+      "Native":211.0
+   },
+   "Zambia":{
+      "Reintroduced":1.0,
+      "Introduced":5.0,
+      "Vagrant":33.0,
+      "Present - origin uncertain":7.0,
+      "Native":1841.0
+   },
+   "Disputed Territory":{
+      "Native":59.0
+   },
+   "Senegal":{
+      "Regionally extinct":5.0,
+      "Reintroduced":1.0,
+      "Vagrant":60.0,
+      "Present - origin uncertain":11.0,
+      "Possibly extinct":3.0,
+      "Introduced":2.0,
+      "Native":1220.0
+   },
+   "Papua New Guinea":{
+      "Regionally extinct":1.0,
+      "Vagrant":16.0,
+      "Present - origin uncertain":22.0,
+      "Possibly extinct":2.0,
+      "Introduced":15.0,
+      "Native":2757.0
+   },
+   "Cote d'Ivoire":{
+      "Regionally extinct":2.0,
+      "Vagrant":39.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":5.0,
+      "Introduced":3.0,
+      "Native":1652.0
+   },
+   "Congo":{
+      "Possibly extinct":3.0,
+      "Introduced":5.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":12.0,
+      "Native":1614.0
+   },
+   "Jordan":{
+      "Regionally extinct":12.0,
+      "Vagrant":86.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":4.0,
+      "Introduced":4.0,
+      "Native":966.0
+   },
+   "Martinique":{
+      "Regionally extinct":10.0,
+      "Vagrant":25.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":1.0,
+      "Introduced":13.0,
+      "Native":406.0
+   },
+   "Curacao":{
+      "Introduced":5.0,
+      "Vagrant":20.0,
+      "Present - origin uncertain":3.0,
+      "Native":281.0
+   },
+   "Holy See":{
+      "Introduced":1.0,
+      "Present - origin uncertain":1.0,
+      "Native":26.0
+   },
+   "Kazakhstan":{
+      "Regionally extinct":7.0,
+      "Reintroduced":2.0,
+      "Vagrant":55.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":3.0,
+      "Introduced":7.0,
+      "Native":773.0
+   },
+   "Poland":{
+      "Regionally extinct":11.0,
+      "Reintroduced":2.0,
+      "Introduced":23.0,
+      "Vagrant":132.0,
+      "Native":688.0
+   },
+   "Eritrea":{
+      "Regionally extinct":6.0,
+      "Vagrant":22.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":3.0,
+      "Introduced":3.0,
+      "Native":1275.0
+   },
+   "Kyrgyzstan":{
+      "Regionally extinct":3.0,
+      "Vagrant":19.0,
+      "Present - origin uncertain":4.0,
+      "Possibly extinct":1.0,
+      "Introduced":7.0,
+      "Native":446.0
+   },
+   "British Indian Ocean Territory":{
+      "Introduced":8.0,
+      "Vagrant":6.0,
+      "Present - origin uncertain":6.0,
+      "Native":578.0
+   },
+   "Montserrat":{
+      "Regionally extinct":1.0,
+      "Introduced":3.0,
+      "Vagrant":19.0,
+      "Present - origin uncertain":4.0,
+      "Native":420.0
+   },
+   "New Caledonia":{
+      "Regionally extinct":7.0,
+      "Vagrant":24.0,
+      "Present - origin uncertain":21.0,
+      "Possibly extinct":3.0,
+      "Introduced":13.0,
+      "Native":1264.0
+   },
+   "Trinidad and Tobago":{
+      "Regionally extinct":1.0,
+      "Reintroduced":1.0,
+      "Vagrant":37.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":2.0,
+      "Introduced":4.0,
+      "Native":871.0
+   },
+   "Macao":{
+      "Introduced":2.0,
+      "Vagrant":1.0,
+      "Present - origin uncertain":2.0,
+      "Native":92.0
+   },
+   "Latvia":{
+      "Regionally extinct":6.0,
+      "Reintroduced":2.0,
+      "Vagrant":55.0,
+      "Present - origin uncertain":1.0,
+      "Introduced":15.0,
+      "Native":524.0
+   },
+   "South Sudan":{
+      "Vagrant":7.0,
+      "Present - origin uncertain":8.0,
+      "Native":795.0
+   },
+   "Japan":{
+      "Regionally extinct":19.0,
+      "Vagrant":139.0,
+      "Present - origin uncertain":13.0,
+      "Possibly extinct":6.0,
+      "Introduced":41.0,
+      "Native":2359.0
+   },
+   "Guadeloupe":{
+      "Regionally extinct":10.0,
+      "Introduced":12.0,
+      "Vagrant":60.0,
+      "Present - origin uncertain":8.0,
+      "Native":497.0
+   },
+   "Sint Maarten":{
+      "Introduced":5.0,
+      "Vagrant":20.0,
+      "Present - origin uncertain":3.0,
+      "Native":247.0
+   },
+   "Greenland":{
+      "Possibly extinct":1.0,
+      "Regionally extinct":1.0,
+      "Introduced":1.0,
+      "Vagrant":138.0,
+      "Native":149.0
+   },
+   "Honduras":{
+      "Regionally extinct":4.0,
+      "Vagrant":5.0,
+      "Present - origin uncertain":29.0,
+      "Possibly extinct":9.0,
+      "Introduced":5.0,
+      "Native":1932.0
+   },
+   "Myanmar":{
+      "Regionally extinct":4.0,
+      "Vagrant":39.0,
+      "Present - origin uncertain":14.0,
+      "Possibly extinct":9.0,
+      "Introduced":8.0,
+      "Native":3002.0
+   },
+   "Mexico":{
+      "Regionally extinct":37.0,
+      "Reintroduced":2.0,
+      "Vagrant":18.0,
+      "Present - origin uncertain":9.0,
+      "Possibly extinct":42.0,
+      "Introduced":22.0,
+      "Native":4158.0
+   },
+   "Egypt":{
+      "Regionally extinct":19.0,
+      "Vagrant":90.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":6.0,
+      "Introduced":9.0,
+      "Native":1341.0
+   },
+   "Cuba":{
+      "Regionally extinct":7.0,
+      "Vagrant":37.0,
+      "Present - origin uncertain":2.0,
+      "Possibly extinct":5.0,
+      "Introduced":18.0,
+      "Native":819.0
+   },
+   "Serbia":{
+      "Regionally extinct":4.0,
+      "Reintroduced":1.0,
+      "Vagrant":67.0,
+      "Present - origin uncertain":6.0,
+      "Possibly extinct":4.0,
+      "Introduced":10.0,
+      "Native":706.0
+   },
+   "Botswana":{
+      "Reintroduced":2.0,
+      "Introduced":4.0,
+      "Vagrant":42.0,
+      "Present - origin uncertain":4.0,
+      "Native":999.0
+   },
+   "United Kingdom":{
+      "Regionally extinct":10.0,
+      "Reintroduced":4.0,
+      "Vagrant":293.0,
+      "Present - origin uncertain":1.0,
+      "Possibly extinct":1.0,
+      "Introduced":47.0,
+      "Native":657.0
+   },
+   "Antarctica":{
+      "Vagrant":43.0,
+      "Present - origin uncertain":3.0,
+      "Native":67.0
+   },
+   "Islamic Republic of Iran":{
+      "Regionally extinct":4.0,
+      "Vagrant":37.0,
+      "Present - origin uncertain":5.0,
+      "Possibly extinct":1.0,
+      "Introduced":13.0,
+      "Native":1235.0
+   },
+   "Greece":{
+      "Regionally extinct":3.0,
+      "Reintroduced":1.0,
+      "Vagrant":85.0,
+      "Present - origin uncertain":3.0,
+      "Possibly extinct":10.0,
+      "Introduced":14.0,
+      "Native":1324.0
+   },
+   "Paraguay":{
+      "Possibly extinct":2.0,
+      "Regionally extinct":3.0,
+      "Introduced":3.0,
+      "Vagrant":16.0,
+      "Native":1036.0
+   },
+   "Fiji":{
+      "Regionally extinct":3.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":16.0,
+      "Possibly extinct":7.0,
+      "Introduced":20.0,
+      "Native":1071.0
+   },
+   "Comoros":{
+      "Introduced":18.0,
+      "Vagrant":34.0,
+      "Present - origin uncertain":5.0,
+      "Native":730.0
+   }
+}

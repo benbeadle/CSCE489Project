@@ -1,5 +1,5 @@
 from lxml import etree
-import os, os.path, time, codecs, csv
+import os, os.path, time, codecs, csv, json, unicodedata
 from collections import defaultdict
 
 DATA = "data.csv"
@@ -194,9 +194,6 @@ def add__to_csv():
         print header_name + " already in headers!"
         exit()
     headers.append(header_name)
-    
-    limit = 1000
-    
     #Add the data to each row
     for index,row in enumerate(rows):
         if index % 1000 == 0:
@@ -205,57 +202,133 @@ def add__to_csv():
         page = etree.HTML(open(FILE.format(id)).read())
         
         strongs = page.xpath(DATA_XPATH["labels"])
+        found = False
         for strong in strongs:
             item = text(strong).replace(":", "")
             if item == header_name.lower():
+                found = True
                 #row.append(data_work_scientific_name(id, page))
                 data = data_work_countries(id, page)
-                #print "'" + data + "'"
-                print id
                 types = data.split("\n\n")
+                statusdict = {}
                 for type in types:
                     spl = type.split(":")
-                    countries = ",".join(spl[1].split(";"))
-                    #if isinstance(countries, str):
-                    try:
-                        print spl[0] + "- " + countries
-                    #else:
-                    except:
-                        print countries
-                        exit()
-                        #try:
-                        #    print spl[0] + "- " + countries.encode("UTF-8")
-                        #except:
-                        #    print countries
-                        #    exit()
-                print "--"
-                #print str(id) + ": '" +  + "'"
+                    status = spl[0]
+                    statusdict[status] = [unicodedata.normalize('NFD', c.strip()).encode('ascii', 'ignore') for c in spl[1].split(";")]
+                row.append(json.dumps(statusdict))
                 break
-        
-        if limit is not -1 and limit <= index:
-            exit()
+        if not found:
+            row.append("N/A")
     
     print "Writing to file"
-    exit()
     f = open(DATA.replace(".csv","")+"_out.csv", 'wb')
     csvw = csv.writer(f, delimiter=',')
     csvw.writerow(headers)
     for row in rows:
         t = []
-        for r in row:
+        for r in row:   
             if isinstance(r, str):
-                #print "string: " + r
                 t.append(r)
             else:
                 t.append(r.encode("UTF-8"))
         csvw.writerow(t)
     f.close()
+    print "The output has been written to " + DATA.replace(".csv","")+"_out.csv"
+    
+def analyze_countries():
+    print "Importing"
+    import_data()
+    global headers, rows
+    
+    countries_index = [index for index,h in enumerate(headers) if h.lower()=="countries"][0]
+    
+    result_dictionary = defaultdict(lambda: defaultdict(int))
+    na_countries = []
+    dist_status = set()
+    
+    print "Aggregating"
+    for row in rows:
+        if row[countries_index] == "N/A":
+            na_countries.append(row[countries_index-1])
+            continue
+        statuses = json.loads(row[countries_index])
+        for status in statuses:
+            dist_status.add(status)
+            for country in statuses[status]:
+                #Remove states / locations in the country and if the last name is first, put it at the end
+                country = country.split(" (")[0]
+                if "," in country:
+                    country = country.split(", ")
+                    country = country[1] + " " + country[0]
+                
+                result_dictionary[country][status] += 1.0
+    
+    #f = open("country_stats.txt", "w")
+    #f.write(json.dumps(result_dictionary))
+    #f.close()
+    print len(rows)
+    print len(result_dictionary)
+    print len(na_countries)
+    
+    for status in dist_status:
+        res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
+        res_s = sorted(res, reverse=True)[:5]
+        print status + ": " + str(res_s)
+def analyze_red_list():
+    print "Importing"
+    import_data()
+    global headers, rows
+    
+    red_list_index = [index for index,h in enumerate(headers) if h.lower()=="red list status"][0]
+    countries_index = [index for index,h in enumerate(headers) if h.lower()=="countries"][0]
+    
+    result_dictionary = defaultdict(lambda: defaultdict(int))
+    dist_status = set()
+    
+    print "Aggregating"
+    for row in rows:
+        if row[countries_index] == "N/A":
+            continue
+        statuses = json.loads(row[countries_index])
+        red_stat = row[red_list_index]
+        dist_status.add(red_stat)
+        for status in statuses:
+            for country in statuses[status]:
+                #Remove states / locations in the country and if the last name is first, put it at the end
+                country = country.split(" (")[0]
+                if "," in country:
+                    country = country.split(", ")
+                    country = country[1] + " " + country[0]
+                
+                result_dictionary[country][red_stat] += 1.0
+        #print statuses
+        #print result_dictionary
+        #exit()
+    
+    #status = "CR"
+    #print sum([result_dictionary[r][status] for r in result_dictionary if status in result_dictionary[r]])
+    #exit()
+    
+    print len(rows)
+    print len(result_dictionary)
+    
+    #f = open("red_list_stats_by_country.txt", "w")
+    #f.write(json.dumps(result_dictionary))
+    #f.close()
+    
+    for status in dist_status:
+        res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
+        res_s = sorted(res, reverse=True)[:5]
+        print status + ": " + str(res_s)
+         
     
 def main():
     #counts()
     #data_parse()
     #data_distinct()
-    add__to_csv()
+    #add__to_csv()
+    #analyze_countries()
+    analyze_red_list()
 
 if __name__ == '__main__':
     main()

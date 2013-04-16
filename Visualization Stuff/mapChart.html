@@ -34,11 +34,11 @@
 
       // Country Search bar stuff
       $(function() {
-        var availableTags = [];
-      
+        var countryList = [];
+        var countryId = [];
+
       // How to update the map once a country is selected
       function updateMap(country) {
-        console.log(country)
         options = {
           region: country,
           colorAxis: {colors: ['blue', 'green','yellow', 'red']},
@@ -56,24 +56,28 @@
             // Request results based off what was entered
             var countriesObject = gapi.client. speciesapi.search.countries({'q':request.term});
             countriesObject.execute(function(countryResponse){
-                console.log(countryResponse)
-                countryList = countryResponse.countries;
-                console.log(countryList)
+                countryList = []
+                countryId = [];
+                for(var i = 0; i < countryResponse.countries.length; i++) { 
+                  //Fill in countries and ids for those countries
+                  countryList.push(countryResponse.countries[i].name);
+                  countryId.push(countryResponse.countries[i].code);
+                }
                 response(countryList)
             });
           }
           else {
             alert("API not initiated.");
           }              
-          /*
-          response( [
-              'Canada',
-              'RU',
-              'China'
-          ])*/
         },
           select: function( event, ui ) {
-            updateMap( ui.item ? ui.item.value : this.value );
+            // When they select the country, find the right id and zoom to it
+            for(var i = 0; i < countryList.length; i++) {
+              if(countryList[i] == ui.item.value) { //TODO Check for countries we can't zoom to and not correct input
+                updateMap( ui.item ? countryId[i] : this.value );
+                return
+              }
+            }
           }
         });
       });

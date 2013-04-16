@@ -184,12 +184,27 @@ def data_work_countries(specie, page):
         print "(countries) id: {0}, len: {1}".format(specie, len(el))
         exit()
     return text(el[0], False)#.encode("ascii")
+    
+def data_work_major_threats(specie, page):
+    el = page.xpath(DATA_XPATH["major threat(s)"])
+    if len(el) != 1:
+        print "(countries) id: {0}, len: {1}".format(specie, len(el))
+        exit()
+    print text(el[0], False)#.encode("ascii")
+    exit()
+
+def data_work_systems(specie, page):
+    el = page.xpath(DATA_XPATH["systems"])
+    if len(el) != 1:
+        print "(countries) id: {0}, len: {1}".format(specie, len(el))
+        exit()
+    return text(el[0], False).encode("ascii")
 
 def add__to_csv():
     import_data()
     global headers, rows
     #Add what I'm currently working on to the headers
-    header_name = "Countries"
+    header_name = "Systems"
     if header_name in headers:
         print header_name + " already in headers!"
         exit()
@@ -208,17 +223,28 @@ def add__to_csv():
             if item == header_name.lower():
                 found = True
                 #row.append(data_work_scientific_name(id, page))
-                data = data_work_countries(id, page)
-                types = data.split("\n\n")
-                statusdict = {}
-                for type in types:
-                    spl = type.split(":")
-                    status = spl[0]
-                    statusdict[status] = [unicodedata.normalize('NFD', c.strip()).encode('ascii', 'ignore') for c in spl[1].split(";")]
-                row.append(json.dumps(statusdict))
+                
+                #data = data_work_countries(id, page)
+                #types = data.split("\n\n")
+                #statusdict = {}
+                #for type in types:
+                #    spl = type.split(":")
+                #    status = spl[0]
+                #    statusdict[status] = [unicodedata.normalize('NFD', c.strip()).encode('ascii', 'ignore') for c in spl[1].split(";")]
+                #row.append(json.dumps(statusdict))
+                
+                data = data_work_systems(id, page)
+                if data == "":
+                    found = False
+                    break
+                data = data.split(";")
+                data = map(str.strip, data)
+                row.append(json.dumps(data))
+                
                 break
+            #Endif
         if not found:
-            row.append("N/A")
+            row.append(json.dumps([]))
     
     print "Writing to file"
     f = open(DATA.replace(".csv","")+"_out.csv", 'wb')
@@ -320,15 +346,62 @@ def analyze_red_list():
         res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
         res_s = sorted(res, reverse=True)[:5]
         print status + ": " + str(res_s)
+def analyze_major_threats():
+    print "Importing"
+    import_data()
+    global headers, rows
+    
+    red_list_index = [index for index,h in enumerate(headers) if h.lower()=="major threat(s)"][0]
+    countries_index = [index for index,h in enumerate(headers) if h.lower()=="countries"][0]
+    
+    result_dictionary = defaultdict(lambda: defaultdict(int))
+    dist_status = set()
+    
+    print "Aggregating"
+    for row in rows:
+        if row[countries_index] == "N/A":
+            continue
+        statuses = json.loads(row[countries_index])
+        red_stat = row[red_list_index]
+        dist_status.add(red_stat)
+        for status in statuses:
+            for country in statuses[status]:
+                #Remove states / locations in the country and if the last name is first, put it at the end
+                country = country.split(" (")[0]
+                if "," in country:
+                    country = country.split(", ")
+                    country = country[1] + " " + country[0]
+                
+                result_dictionary[country][red_stat] += 1.0
+        #print statuses
+        #print result_dictionary
+        #exit()
+    
+    #status = "CR"
+    #print sum([result_dictionary[r][status] for r in result_dictionary if status in result_dictionary[r]])
+    #exit()
+    
+    print len(rows)
+    print len(result_dictionary)
+    
+    #f = open("red_list_stats_by_country.txt", "w")
+    #f.write(json.dumps(result_dictionary))
+    #f.close()
+    
+    for status in dist_status:
+        res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
+        res_s = sorted(res, reverse=True)[:5]
+        print status + ": " + str(res_s)
          
     
 def main():
     #counts()
     #data_parse()
     #data_distinct()
-    #add__to_csv()
+    add__to_csv()
     #analyze_countries()
-    analyze_red_list()
+    #analyze_red_list()
+    #analyze_major_threats()
 
 if __name__ == '__main__':
     main()

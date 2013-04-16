@@ -183,14 +183,14 @@ def data_work_countries(specie, page):
     if len(el) != 1:
         print "(countries) id: {0}, len: {1}".format(specie, len(el))
         exit()
-    return text(el[0], False)#.encode("ascii")
+    return text(el[0], False)#.encode("UTF-8")
     
 def data_work_major_threats(specie, page):
     el = page.xpath(DATA_XPATH["major threat(s)"])
     if len(el) != 1:
         print "(countries) id: {0}, len: {1}".format(specie, len(el))
         exit()
-    print text(el[0], False)#.encode("ascii")
+    print text(el[0], False)#.encode("UTF-8")
     exit()
 
 def data_work_systems(specie, page):
@@ -198,7 +198,7 @@ def data_work_systems(specie, page):
     if len(el) != 1:
         print "(countries) id: {0}, len: {1}".format(specie, len(el))
         exit()
-    return text(el[0], False).encode("ascii")
+    return text(el[0], False).encode("UTF-8")
 
 def add__to_csv():
     import_data()
@@ -392,16 +392,58 @@ def analyze_major_threats():
         res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
         res_s = sorted(res, reverse=True)[:5]
         print status + ": " + str(res_s)
-         
+
+#Change some of the columns initially provided in the export
+def fix_data():
+    import_data()
+    global headers, rows
+    #Add what I'm currently working on to the headers
+    syns_index = [index for index,h in enumerate(headers) if h.lower()=="synonyms"][0]
+    #Add the data to each row
+    for index,row in enumerate(rows):
+        if index % 1000 == 0:
+            print "Species " + str(index)
+        id = int(row[0])
+        
+        syns = ""
+        
+        try:
+            syns = row[syns_index].encode("UTF-8")
+        except:
+            syns = row[syns_index]
+        
+        if syns.strip() == "":
+            row[syns_index] = json.dumps([])
+            continue
+        
+        syns = map(str.strip, syns.split("|"))
+        row[syns_index] = json.dumps(str(syns))
     
+    print "Writing to file"
+    f = open(DATA.replace(".csv","")+"_out.csv", 'wb')
+    csvw = csv.writer(f, delimiter=',')
+    csvw.writerow(headers)
+    for row in rows:
+        t = []
+        for r in row:   
+            if isinstance(r, str):
+                t.append(r)
+            else:
+                t.append(r.encode("UTF-8"))
+        csvw.writerow(t)
+    f.close()
+    print "The output has been written to " + DATA.replace(".csv","")+"_out.csv"
+     
 def main():
     #counts()
     #data_parse()
     #data_distinct()
-    add__to_csv()
+    #add__to_csv()
     #analyze_countries()
     #analyze_red_list()
     #analyze_major_threats()
+    #fix_data()
+    
 
 if __name__ == '__main__':
     main()

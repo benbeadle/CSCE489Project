@@ -1,46 +1,42 @@
 <html>
   <head>
+
+    <!-- My CSS -->
     <link href="map.css" rel="stylesheet" type="text/css" />
     
+    <!-- JQuery Links -->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
+    <!-- Google Charts - GeoChart -->
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-
-    <style>
-      .ui-autocomplete {
-        max-height: 100px;
-        overflow-y: auto;
-        /* prevent horizontal scrollbar */
-        overflow-x: hidden;
-      }
-      /* IE 6 doesn't support max-height
-       * we use height instead, but this forces the menu to always be this tall
-       */
-      * html .ui-autocomplete {
-        height: 100px;
-      }
-    </style>
-    
+   
+    <!--Google App Engine -->
+    <script src="https://apis.google.com/js/client.js?onload=load"></script>
 
     <script type='text/javascript'>
 
       var chart;
       var options;
       var data;
+      var apiInitiated = false;
 
+      function init() {
+        apiInitiated = true;
+        console.log("Loaded API");
+      }
+
+      function load() {
+        var ROOT = 'https://interactivethreatenedspecies.appspot.com/_ah/api';
+        gapi.client.load('speciesapi', 'v1', init, ROOT);
+      }
+
+      // Country Search bar stuff
       $(function() {
-        var availableTags = [
-          'US',
-          'Germany',
-          'Brazil',
-          'France',
-          'Canada',
-          'RU',
-          'China'
-        ];
+        var availableTags = [];
       
+      // How to update the map once a country is selected
       function updateMap(country) {
         console.log(country)
         options = {
@@ -52,14 +48,37 @@
         chart.draw(data, options);
       }
 
-      $( "#tags" ).autocomplete({
-        source: availableTags,
+      // How to make the search bar function
+      $( "#countryTags")
+      .autocomplete({ // Calling Google App Engine here
+        source: function(request, response) {
+          if(apiInitiated) {
+            // Request results based off what was entered
+            var countriesObject = gapi.client. speciesapi.search.countries({'q':request.term});
+            countriesObject.execute(function(countryResponse){
+                console.log(countryResponse)
+                countryList = countryResponse.countries;
+                console.log(countryList)
+                response(countryList)
+            });
+          }
+          else {
+            alert("API not initiated.");
+          }              
+          /*
+          response( [
+              'Canada',
+              'RU',
+              'China'
+          ])*/
+        },
           select: function( event, ui ) {
             updateMap( ui.item ? ui.item.value : this.value );
           }
         });
       });
 
+      // Animal Search Bar stuff here
       $(function() {
         var availableTags = [
           'Tiger',
@@ -71,12 +90,14 @@
           'Bird'
         ];
 
+        // TODO make this do something other than update the right panel
         function log( message ) {
           document.getElementById("rightconsole").innerHTML=message;
         }
       
+        // How to make the search bar function
         $( "#animalTags" ).autocomplete({
-          source: availableTags,
+          source: availableTags, // TODO API call to generate this
           select: function( event, ui ) {
             log( ui.item ?
               "Selected: " + ui.item.value :
@@ -85,11 +106,14 @@
         });
       });  
    
-    
+      // Load google geochart stuff
       google.load('visualization', '1', {'packages': ['geochart']});
       google.setOnLoadCallback(drawRegionsMap);
 
+      // Draw the original map
       function drawRegionsMap() {
+        // Original data to use in map
+        // TODO API call to generate this
         data = google.visualization.arrayToDataTable([
           ['Country', 'Extinct Animals'],
           ['Germany', 200],
@@ -101,18 +125,20 @@
           ['China', 10]
         ]);
 
+        // Original Options
         options = {
           colorAxis: {colors: ['blue', 'green','yellow', 'red']},
           displayMode: 'regions',
           resolution: 'country'
         };
 
+        // Actually draw it
         chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
         chart.draw(data, options);
 
+        // TODO Add click stuff here
         google.visualization.events.addListener(chart, 'select', 
           function(eventData) {
-            // maybe you want to change the data table here...
             whereTheyClicked = chart.getSelection();  
             var country =  data.getValue(whereTheyClicked[0].row, 0);
             var text = 'You clicked: ' + country;
@@ -122,7 +148,7 @@
 
     </script>
   </head>
-  <body>
+  <body onload="load();">
 
     <div id='titlebar'>
       <h1>Team Planeteers Present...</h1>
@@ -130,8 +156,8 @@
     
     <div id='searchbar'>
       <div class="ui-widget">
-        <label for="tags">Country: </label>
-        <input id="tags" />
+        <label for="countryTags">Country: </label>
+        <input id="countryTags" />
         
         <label for="animalTags">Animal: </label>
         <input id="animalTags" />

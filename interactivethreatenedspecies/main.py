@@ -14,11 +14,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2
+import webapp2, os
+from google.appengine.api import memcache
+from google.appengine.api.taskqueue import taskqueue, Task
+from google.appengine.ext.webapp import template
+
+def m(i):
+    return memcache.get(i)
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        if (m("country_list") is None or m("animal_list") is None) and (m("queue_cache") != "running"):
+            task = Task(url='/queue/cacher').add(queue_name='cacher')
+        path = os.path.join(os.path.dirname(__file__), 'html/mapChart.html')
+        template_values = {}
+        self.response.out.write(template.render(path, {}))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

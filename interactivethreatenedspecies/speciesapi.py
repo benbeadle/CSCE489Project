@@ -3,121 +3,112 @@ This file runs on /_ah/api/speciesapi/v[0-9]/*
 
 These are the API methods that get called when clients use the Endpoints API
 
-Version: 1.0
+Version: 2.0
 """
-import logging, csv, json
+import logging, csv, json, memcachepickler
 from google.appengine.ext import endpoints
 from protorpc import remote
 from speciesapimessages import *
 from google.appengine.api import memcache
+from collections import defaultdict
+from google.appengine.api.taskqueue import taskqueue, Task
 
-def import_data():
-    #Import the data from the exported file
-    f = open("data.csv")
-    reader = csv.reader(f)
-    rows = []
-    for row in reader:
-        t = []
-        for r in row:
-            try:
-                t.append(r.decode("UTF-8"))
-            except:
-                t.append(r)
-        rows.append(t)
-    f.close()
-    return rows
 def m(t):
     return memcache.get(t)
 def l(out):
     logging.info(out)
-#Returns the list of all the countries. Save it in memcache
+
+    
+#Returns the list of all the countries.
 def get_country_list():
     country_list = m("country_list")
     if country_list is not None:
         return country_list
     
-    rows = import_data()
-    headers = rows.pop(0)
+    #So the country list isn't in cache, go ahead and add to the queue to save it back up if it's not already being processed
     
-    #Loop through the rows and get the data
-    country_index = [index for index,h in enumerate(headers) if h.lower()=="countries"][0]
-    country_list = []
-    for row in rows:
-        if row[country_index] == "N/A":
-            continue
-        countries = json.loads(row[country_index])
-        for status in countries:
-            #Some countries have their specific states. We don't care about that here
-            country_list += [country.split(" (")[0] for country in countries[status]]
-    country_list = list(set(country_list))
-    memcache.set("country_list", country_list)
-    return country_list
-def get_code_list():
-    code_list = m("code_list")
-    if code_list is not None:
-        return code_list
+    if m("queue_cache") != "running":
+        task = Task(url='/queue/cacher').add(queue_name='cacher')
     
-    f = open("ISOtoCountry.xls")
-    reader = csv.reader(f)
-    rows = [row for row in reader]
-    f.close()
+    return []
+#Returns the list of all the animal names.
+def get_animal_list():
+    animal_list = memcachepickler.get("animal_list")
+    if animal_list is not None:
+        return animal_list
     
-    memcache.set("code_list", rows)
-    return rows
-
+    #So the animal list isn't in cache, go ahead and add to the queue to save it back up if it's not already being processed
+    if m("queue_cache") != "running":
+        task = Task(url='/queue/cacher').add(queue_name='cacher')
+    
+    return []
+   
 #Define the species API
-@endpoints.api(name='speciesapi',version='v1',
+@endpoints.api(name='speciesapi',version='v2',
                description="Endangered species API", hostname='interactivethreatenedspecies.appspot.com')
 #The API Class
 class SpeciesApi(remote.Service):
   
-  #Search the bus stops from the query
+  #Search for countries
   @endpoints.method(SearchCountriesRequest, SearchCountriesResponse, name='search.countries', path='search/countries', http_method='GET')
   def search_countries(self, request):
     
     country_list = get_country_list()
     query = request.q
-    #Return an empty result for an empty query
+    
     if query == "" or query == None:
         return SearchCountriesResponse(countries=country_list)
     
     
     matching = {}
     for country in country_list:
-        ind = country.lower().find(query.lower())
+        ind = country.name.lower().find(query.lower())
         if ind != -1:
             matching[country] = ind
-    
     #Sort the results by index
     matching_sorted = sorted(matching.iteritems(), key=lambda (k,v): (v,k))
     results = [country[0] for country in matching_sorted]
     
     return SearchCountriesResponse(countries=results)
   
-  #Find the country code given a country
-  @endpoints.method(CountryCodeRequest, CountryCodeResponse, name='search.code', path='search/code', http_method='GET')
-  def country_to_code(self, request):
-    
-    code_list = get_code_list()
+  #Search for animals
+  @endpoints.method(SearchAnimalsRequest, SearchAnimalsResponse, name='search.animals', path='search/animals', http_method='GET')
+  def search_animals(self, request):
     
     query = request.q
-    #Return an empty result for an empty query
+    
     if query == "" or query == None:
-        return CountryCodeResponse(code="")
+        return SearchAnimalsResponse(animals=[])
     
+    sm = memcache.get("search_animal|" + query)
+    if sm is not None:
+        return SearchAnimalsResponse(animals=sm)
     
+    animal_list = get_animal_list()
+    logging.info("animal_list len: " + str(len(animal_list)))
     matching = {}
-    for code in code_list:
-        ind = country.lower().find(query.lower())
+    for animal in animal_list:
+        ind = animal["name"].lower().find(query.lower())
         if ind != -1:
-            matching[country] = ind
-    
+            matching[AnimalResult(name=animal["name"],type=animal["type"])] = ind
     #Sort the results by index
     matching_sorted = sorted(matching.iteritems(), key=lambda (k,v): (v,k))
-    results = [country[0] for country in matching_sorted]
-    
-    return SearchCountriesResponse(countries=results)
+    #logging.info(matching_sorted[0])
+    #return
+    results = [animal[0] for animal in matching_sorted][:10]
+    memcache.set("search_animal|" + query, results)
+    #results=[]
+    return SearchAnimalsResponse(animals=results[:10])
   
+  #Called on page load to prepare for the cache
+  @endpoints.method(PageLoadRequest, PageLoadResponse, name='page.load', path='page/load', http_method='GET')
+  def page_load(self, request):
+    
+    if (m("country_list") is None or m("animal_list") is None) and (m("queue_cache") != "running"):
+        task = Task(url='/queue/cacher').add(queue_name='cacher')
+        return PageLoadResponse(result=True)
+    
+    return PageLoadResponse(result=False)
   
 #Create the service
 speciesapi_service = endpoints.api_server([SpeciesApi], restricted=False)

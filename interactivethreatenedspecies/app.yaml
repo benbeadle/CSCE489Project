@@ -13,6 +13,10 @@ handlers:
 - url: /_ah/spi/.*
   script: speciesapi.speciesapi_service
 
+# The API Endpoint handler
+- url: /queue/cacher
+  script: queue.cacher.app
+
 - url: .*
   script: main.app
 

@@ -1,6 +1,6 @@
 from lxml import etree
-import os, os.path, time, codecs, csv, json, unicodedata
-from collections import defaultdict
+import os, os.path, time, codecs, csv, json, unicodedata, re
+from collections import defaultdict, Counter
 
 DATA = "data.csv"
 FOLDER = "pages/"
@@ -91,6 +91,30 @@ def counts():
         f.write(out)
         #f.write("{0}:{1}\n".format(sorted_l, int(label_dict[sorted_l])))
     f.close()
+
+#Find word frequencies in the common names
+def word_counter():
+    import_data()
+    
+    common_index = [index for index,h in enumerate(headers) if h.lower()=="common names (eng)"][0]
+    
+    result_dict = defaultdict(int)
+    
+    print "Aggregating"
+    for row in rows:
+        if row[common_index].strip() != "":
+            name = str(row[common_index]).strip().lower()
+            name_spl = set(re.split(" |,|-", name))
+            for n_s in name_spl:
+                if n_s.strip() != "":
+                    result_dict[n_s.strip()] += 1
+    
+    
+    c = Counter(result_dict)
+    f = open("common_word_count.txt", "w")
+    f.write("\n".join([t[0]+": "+str(t[1]) for t in c.most_common()]))
+    f.close()
+    print "Done working on {0} rows!".format(len(rows))
 
 #Parse the pages to see what distinct data each label has
 def data_parse():
@@ -443,7 +467,7 @@ def main():
     #analyze_red_list()
     #analyze_major_threats()
     #fix_data()
-    
+    word_counter()
 
 if __name__ == '__main__':
     main()

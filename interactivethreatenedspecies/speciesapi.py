@@ -12,6 +12,7 @@ from speciesapimessages import *
 from google.appengine.api import memcache
 from collections import defaultdict
 from google.appengine.api.taskqueue import taskqueue, Task
+from random import randint
 
 def m(t):
     return memcache.get(t)
@@ -33,7 +34,7 @@ def get_country_list():
     return []
 #Returns the list of all the animal names.
 def get_animal_list():
-    animal_list = memcachepickler.get("animal_list")
+    animal_list = memcache.get("animal_list")
     if animal_list is not None:
         return animal_list
     
@@ -57,14 +58,14 @@ class SpeciesApi(remote.Service):
     query = request.q
     
     if query == "" or query == None:
-        return SearchCountriesResponse(countries=country_list)
-    
+        return SearchCountriesResponse(countries=[])
     
     matching = {}
     for country in country_list:
-        ind = country.name.lower().find(query.lower())
+        ind = country["name"].lower().find(query.lower())
         if ind != -1:
-            matching[country] = ind
+            matching[Country(name=country["name"], code=country["code"])] = ind
+    
     #Sort the results by index
     matching_sorted = sorted(matching.iteritems(), key=lambda (k,v): (v,k))
     results = [country[0] for country in matching_sorted]
@@ -90,15 +91,26 @@ class SpeciesApi(remote.Service):
     for animal in animal_list:
         ind = animal["name"].lower().find(query.lower())
         if ind != -1:
-            matching[AnimalResult(name=animal["name"],type=animal["type"])] = ind
+            matching[AnimalResult(name=animal["name"],type=animal["type"].upper())] = ind
     #Sort the results by index
     matching_sorted = sorted(matching.iteritems(), key=lambda (k,v): (v,k))
     #logging.info(matching_sorted[0])
     #return
     results = [animal[0] for animal in matching_sorted][:10]
-    memcache.set("search_animal|" + query, results)
+    #memcache.set("search_animal|" + query, results)
     #results=[]
-    return SearchAnimalsResponse(animals=results[:10])
+    return SearchAnimalsResponse(animals=results)
+  
+  #Search the database for stats
+  @endpoints.method(SearchDatabaseRequest, SearchDatabaseResponse, name='search.data', path='search/data', http_method='GET')
+  def search_database(self, request):
+    
+    datas = json.loads('[{"code": "AE","name": "United Arab Emirates"},{"code": "GB","name": "United Kingdom"},{"code": "US","name": "United States"},{"code": "UM","name": "United States Minor Outlying Islands"},{"code": "HU","name": "Hungary"}]')
+    
+    ret_val = [Country(name=data["name"],code=data["code"], rating=randint(1,100)) for data in datas]
+    
+    return SearchDatabaseResponse(countries=ret_val)
+    
   
   #Called on page load to prepare for the cache
   @endpoints.method(PageLoadRequest, PageLoadResponse, name='page.load', path='page/load', http_method='GET')

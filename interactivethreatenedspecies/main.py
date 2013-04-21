@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2, os
+import webapp2, os, memcachepickler, json
 from google.appengine.api import memcache
 from google.appengine.api.taskqueue import taskqueue, Task
 from google.appengine.ext.webapp import template
@@ -24,6 +24,10 @@ def m(i):
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        self.response.out.headers['Content-Type'] = 'application/json'
+        self.response.out.write(memcachepickler.get("animal_list")[0])
+        return
+        
         if (m("country_list") is None or m("animal_list") is None) and (m("queue_cache") != "running"):
             task = Task(url='/queue/cacher').add(queue_name='cacher')
         path = os.path.join(os.path.dirname(__file__), 'html/mapChart.html')

@@ -1,0 +1,7 @@
+total_storage_limit: 500M
+queue:
+#The queue that processes data to save in the cache
+- name: cacher
+  rate: 25/s
+  mode: push
+  bucket_size: 50

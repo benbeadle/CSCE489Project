@@ -44,20 +44,22 @@ def run_cacher():
     memcache.set("country_list", country_list)
     del country_list
     
-    
+    """
     animal_list = [{"name":"snake","type":"common"}, {"name":"bat","type":"common"}, {"name":"mouse","type":"common"}, {"name":"frog","type":"common"}, {"name":"rat","type":"common"}, {"name":"shrew","type":"common"}, {"name":"crayfish","type":"common"}, {"name":"lizard","type":"common"}, {"name":"warbler","type":"common"}, {"name":"wrasse","type":"common"}, {"name":"skink","type":"common"}, {"name":"gecko","type":"common"}, {"name":"snail","type":"common"}, {"name":"squirrel","type":"common"}, {"name":"salamander","type":"common"}, {"name":"shark","type":"common"}, {"name":"owl","type":"common"}, {"name":"finch","type":"common"}, {"name":"toad","type":"common"}, {"name":"turtle","type":"common"}, {"name":"dove","type":"common"}, {"name":"parrot","type":"common"}, {"name":"woodpecker","type":"common"}, {"name":"catfish","type":"common"}, {"name":"fish","type":"common"}, {"name":"monkey","type":"common"}, {"name":"lobster","type":"common"}, {"name":"toed","type":"common"}, {"name":"cuckoo","type":"common"}, {"name":"catshark","type":"common"}, {"name":"eel","type":"common"}, {"name":"sunbird","type":"common"}, {"name":"mole","type":"common"}, {"name":"parrotfish","type":"common"}, {"name":"honeyeater","type":"common"}, {"name":"viper","type":"common"}, {"name":"eagle","type":"common"}, {"name":"parakeet","type":"common"}, {"name":"worm","type":"common"}, {"name":"hawk","type":"common"}, {"name":"deer","type":"common"}, {"name":"opossum","type":"common"}, {"name":"antbird","type":"common"}, {"name":"gerbil","type":"common"}, {"name":"kingfisher","type":"common"}, {"name":"tiger","type":"common"}, {"name":"lemur","type":"common"}, {"name":"crab","type":"common"}, {"name":"hummingbird","type":"common"}, {"name":"angelfish","type":"common"}, {"name":"stingray","type":"common"}, {"name":"swallow","type":"common"}, {"name":"chameleon","type":"common"}, {"name":"cricket","type":"common"}, {"name":"duck","type":"common"}]
     memcache.set("animal_list", animal_list)
     """
+    
+    #"""
     f = open("animal_list.json")
     animal_list = json.loads(f.read())
     f.close()
     memcachepickler.set("animal_list", animal_list)
     del animal_list
-    """
-    
-    memcache.delete("queue_cache")
+    #memcache.delete("queue_cache")
     logging.info("run_cacher completed")
     return
+    #"""
+    
     
     #Import the data
     rows = data_get_contents()
@@ -138,17 +140,20 @@ def run_cacher():
     
     memcache.set("country_list", ret_list)
     
-    animal_list = []
+    animal_list = {}
     for type in names:
         for name in names[type]:
             if name == "":
                 continue
             if isinstance(name, str):
-                animal_list.append({"name":unicodedata.normalize('NFKD', unicode(name,errors="ignore")).decode('ascii', 'ignore'),"type":type})
+                animal_list[type].append(unicodedata.normalize('NFKD', unicode(name,errors="ignore")).decode('ascii', 'ignore'))
             else:
-                animal_list.append({"name":unicodedata.normalize('NFKD', name).encode('ascii', errors='ignore'),"type":type})
+                animal_list[type].append(unicodedata.normalize('NFKD', name).encode('ascii', errors='ignore'))
+    
     
     memcachepickler.set("animal_list", animal_list)
+    
+    
     
     memcache.delete("queue_cache")
     logging.info("run_cacher completed")

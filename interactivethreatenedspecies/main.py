@@ -25,7 +25,7 @@ def m(i):
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.out.headers['Content-Type'] = 'application/json'
-        self.response.out.write(memcachepickler.get("animal_list")[0])
+        self.response.out.write(json.dumps(memcachepickler.get("animal_list")))
         return
         
         if (m("country_list") is None or m("animal_list") is None) and (m("queue_cache") != "running"):

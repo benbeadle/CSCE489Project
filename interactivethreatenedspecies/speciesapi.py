@@ -34,7 +34,7 @@ def get_country_list():
     return []
 #Returns the list of all the animal names.
 def get_animal_list():
-    animal_list = memcache.get("animal_list")
+    animal_list = memcachepickler.get("animal_list")
     if animal_list is not None:
         return animal_list
     
@@ -88,17 +88,16 @@ class SpeciesApi(remote.Service):
     animal_list = get_animal_list()
     logging.info("animal_list len: " + str(len(animal_list)))
     matching = {}
-    for animal in animal_list:
-        ind = animal["name"].lower().find(query.lower())
-        if ind != -1:
-            matching[AnimalResult(name=animal["name"],type=animal["type"].upper())] = ind
-    #Sort the results by index
+    for type in animal_list:
+        type_upper = type.upper()
+        for animal in animal_list[type]:
+            ind = animal.lower().find(query.lower())
+            if ind != -1:
+                matching[AnimalResult(name=animal,type=type_upper)] = ind
+    
     matching_sorted = sorted(matching.iteritems(), key=lambda (k,v): (v,k))
-    #logging.info(matching_sorted[0])
-    #return
     results = [animal[0] for animal in matching_sorted][:10]
-    #memcache.set("search_animal|" + query, results)
-    #results=[]
+    memcache.set("search_animal|" + query, results)
     return SearchAnimalsResponse(animals=results)
   
   #Search the database for stats

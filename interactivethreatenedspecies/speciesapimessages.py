@@ -41,9 +41,3 @@ class SearchDatabaseRequest(messages.Message):
   type = messages.EnumField(AnimalTypeEnum, 2, default='COMMON')
 class SearchDatabaseResponse(messages.Message):
   countries = messages.MessageField(Country, 1, repeated=True)
-
-
-class PageLoadRequest(messages.Message):
-  dummy_field = messages.StringField(1) #Dummy field
-class PageLoadResponse(messages.Message):
-  result = messages.BooleanField(1, default=True)

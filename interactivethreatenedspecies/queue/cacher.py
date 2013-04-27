@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-import webapp2, logging, json, csv, speciesapimessages, re, memcachepickler, unicodedata
-from google.appengine.api import memcache
+import webapp2, logging, json, csv, speciesapimessages, re, ndbpickler, unicodedata, models
+from google.appengine.api import memcache,files
+from google.appengine.ext import ndb
 from collections import defaultdict
 
 resp = None
@@ -33,32 +34,66 @@ def iso_get_contents():
     memcachepickler.set("file_ISOtoCountry", rows)
     return rows
 
+index = 0
 def run_cacher():
-    memcache.set("queue_cache", "running")
+    
+    logging.info("Done")
+    input = ""
+    count = 1
+    with files.open("/gs/its/species.json", 'r') as f:
+        data = f.read(5242880)
+        while data:
+            count += 1
+            input += data
+            data = f.read(5242880)
+    logging.info("Done: " + str(len(json.loads(input))))
+    logging.info("Count: " + str(count))
+    
+    return
+    memcache.set("queue_cache", "running", time=60)
     logging.info("run_cacher")
     
-    
-    f = open("country_list.json")
-    country_list = json.loads(f.read())
-    f.close()
-    memcache.set("country_list", country_list)
-    del country_list
-    
     """
-    animal_list = [{"name":"snake","type":"common"}, {"name":"bat","type":"common"}, {"name":"mouse","type":"common"}, {"name":"frog","type":"common"}, {"name":"rat","type":"common"}, {"name":"shrew","type":"common"}, {"name":"crayfish","type":"common"}, {"name":"lizard","type":"common"}, {"name":"warbler","type":"common"}, {"name":"wrasse","type":"common"}, {"name":"skink","type":"common"}, {"name":"gecko","type":"common"}, {"name":"snail","type":"common"}, {"name":"squirrel","type":"common"}, {"name":"salamander","type":"common"}, {"name":"shark","type":"common"}, {"name":"owl","type":"common"}, {"name":"finch","type":"common"}, {"name":"toad","type":"common"}, {"name":"turtle","type":"common"}, {"name":"dove","type":"common"}, {"name":"parrot","type":"common"}, {"name":"woodpecker","type":"common"}, {"name":"catfish","type":"common"}, {"name":"fish","type":"common"}, {"name":"monkey","type":"common"}, {"name":"lobster","type":"common"}, {"name":"toed","type":"common"}, {"name":"cuckoo","type":"common"}, {"name":"catshark","type":"common"}, {"name":"eel","type":"common"}, {"name":"sunbird","type":"common"}, {"name":"mole","type":"common"}, {"name":"parrotfish","type":"common"}, {"name":"honeyeater","type":"common"}, {"name":"viper","type":"common"}, {"name":"eagle","type":"common"}, {"name":"parakeet","type":"common"}, {"name":"worm","type":"common"}, {"name":"hawk","type":"common"}, {"name":"deer","type":"common"}, {"name":"opossum","type":"common"}, {"name":"antbird","type":"common"}, {"name":"gerbil","type":"common"}, {"name":"kingfisher","type":"common"}, {"name":"tiger","type":"common"}, {"name":"lemur","type":"common"}, {"name":"crab","type":"common"}, {"name":"hummingbird","type":"common"}, {"name":"angelfish","type":"common"}, {"name":"stingray","type":"common"}, {"name":"swallow","type":"common"}, {"name":"chameleon","type":"common"}, {"name":"cricket","type":"common"}, {"name":"duck","type":"common"}]
-    memcache.set("animal_list", animal_list)
-    """
-    
-    #"""
     f = open("animal_list.json")
     animal_list = json.loads(f.read())
     f.close()
-    memcachepickler.set("animal_list", animal_list)
-    del animal_list
-    #memcache.delete("queue_cache")
-    logging.info("run_cacher completed")
+    for ran in animal_list:
+        ndbpickler.set("animal_list_" + ran, animal_list[ran])
+    ndbpickler.stats()
+    """
+    
+    """
+    f = open("country_list.json")
+    country_list = json.loads(f.read())
+    f.close()
+    cl = {}
+    for item in country_list:
+        cl[item["code"]] = item["name"]
+    ndbpickler.set("country_list", cl)
+    ndbpickler.stats()
+    """
+    logging.info("opening")
+    f = open("species_" + str(index) + ".json")
+    species = json.loads(f.read())
+    logging.info("Read: " + str(len(species)))
+    f.close()
+    for i,s in enumerate(species):
+        ndb_key = ndb.Key(models.Species, s["id"])
+        m = models.Species(key=ndb_key)
+        m.id=s["id"]
+        m.major_threats=s["major_threats"]
+        m.names=s["names"]
+        m.countries=s["countries"]
+        m.red_list_status=s["red_list"]
+        m.population=s["population"]
+        m.systems=s["systems"]
+        m.habitat_ecology=s["habitat_ecology"]
+        m.put()
+        if i % 100 == 0:
+            logging.info("Index: " + str(i))
+     
+    logging.info("Done!! Saved {0} species. There are {1} objs.".format(len(species), models.Species.query().count()))
     return
-    #"""
     
     
     #Import the data
@@ -161,6 +196,8 @@ def run_cacher():
 
 class QueueHandler(webapp2.RequestHandler):
     def post(self):
+        global index
+        index = self.request.get("index")
         run_cacher()
     def get(self):
         run_cacher()

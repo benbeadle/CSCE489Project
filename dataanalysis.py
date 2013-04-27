@@ -1,5 +1,5 @@
 from lxml import etree
-import os, os.path, time, codecs, csv, json, unicodedata, re
+import os, os.path, time, codecs, csv, json, unicodedata, re, urllib2, csv
 from collections import defaultdict, Counter
 
 DATA = "data.csv"
@@ -212,23 +212,35 @@ def data_work_countries(specie, page):
 def data_work_major_threats(specie, page):
     el = page.xpath(DATA_XPATH["major threat(s)"])
     if len(el) != 1:
-        print "(countries) id: {0}, len: {1}".format(specie, len(el))
+        print "(majorthreats) id: {0}, len: {1}".format(specie, len(el))
         exit()
-    print text(el[0], False)#.encode("UTF-8")
-    exit()
+    return text(el[0], False)
+
+def data_work_population(specie, page):
+    el = page.xpath(DATA_XPATH["population"])
+    if len(el) != 1:
+        print "(population) id: {0}, len: {1}".format(specie, len(el))
+        exit()
+    return text(el[0], False)
 
 def data_work_systems(specie, page):
     el = page.xpath(DATA_XPATH["systems"])
     if len(el) != 1:
-        print "(countries) id: {0}, len: {1}".format(specie, len(el))
+        print "(systems) id: {0}, len: {1}".format(specie, len(el))
         exit()
     return text(el[0], False).encode("UTF-8")
+    
+def data_work_habitat_ecology(specie, page):
+    el = page.xpath(DATA_XPATH["habitat and ecology"])
+    if len(el) != 1:
+        return ""
+    return text(el[0], False).encode("UTF-8")
 
-def add__to_csv():
+def add_to_csv():
     import_data()
     global headers, rows
     #Add what I'm currently working on to the headers
-    header_name = "Systems"
+    header_name = "Habitat and Ecology"
     if header_name in headers:
         print header_name + " already in headers!"
         exit()
@@ -257,18 +269,27 @@ def add__to_csv():
                 #    statusdict[status] = [unicodedata.normalize('NFD', c.strip()).encode('ascii', 'ignore') for c in spl[1].split(";")]
                 #row.append(json.dumps(statusdict))
                 
-                data = data_work_systems(id, page)
-                if data == "":
-                    found = False
-                    break
-                data = data.split(";")
-                data = map(str.strip, data)
-                row.append(json.dumps(data))
+                # data = data_work_systems(id, page)
+                # if data == "":
+                    # found = False
+                    # break
+                # data = data.split(";")
+                # data = map(str.strip, data)
+                # row.append(json.dumps(data))
+                
+                #data = data_work_major_threats(id, page).encode("utf-8")
+                
+                #data = data_work_population(id, page).encode("utf-8")
+                
+                data = unicodedata.normalize('NFD', unicode(data_work_habitat_ecology(id, page),errors="ignore")).encode('ascii', 'ignore')
+                
+                
+                row.append(data.replace("\n", "  "))
                 
                 break
             #Endif
         if not found:
-            row.append(json.dumps([]))
+            row.append(json.dumps(""))
     
     print "Writing to file"
     f = open(DATA.replace(".csv","")+"_out.csv", 'wb')
@@ -370,52 +391,6 @@ def analyze_red_list():
         res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
         res_s = sorted(res, reverse=True)[:5]
         print status + ": " + str(res_s)
-def analyze_major_threats():
-    print "Importing"
-    import_data()
-    global headers, rows
-    
-    red_list_index = [index for index,h in enumerate(headers) if h.lower()=="major threat(s)"][0]
-    countries_index = [index for index,h in enumerate(headers) if h.lower()=="countries"][0]
-    
-    result_dictionary = defaultdict(lambda: defaultdict(int))
-    dist_status = set()
-    
-    print "Aggregating"
-    for row in rows:
-        if row[countries_index] == "N/A":
-            continue
-        statuses = json.loads(row[countries_index])
-        red_stat = row[red_list_index]
-        dist_status.add(red_stat)
-        for status in statuses:
-            for country in statuses[status]:
-                #Remove states / locations in the country and if the last name is first, put it at the end
-                country = country.split(" (")[0]
-                if "," in country:
-                    country = country.split(", ")
-                    country = country[1] + " " + country[0]
-                
-                result_dictionary[country][red_stat] += 1.0
-        #print statuses
-        #print result_dictionary
-        #exit()
-    
-    #status = "CR"
-    #print sum([result_dictionary[r][status] for r in result_dictionary if status in result_dictionary[r]])
-    #exit()
-    
-    print len(rows)
-    print len(result_dictionary)
-    
-    #f = open("red_list_stats_by_country.txt", "w")
-    #f.write(json.dumps(result_dictionary))
-    #f.close()
-    
-    for status in dist_status:
-        res = [(result_dictionary[r][status],r) for r in result_dictionary if status in result_dictionary[r]]
-        res_s = sorted(res, reverse=True)[:5]
-        print status + ": " + str(res_s)
 
 #Change some of the columns initially provided in the export
 def fix_data():
@@ -441,7 +416,7 @@ def fix_data():
             continue
         
         syns = map(str.strip, syns.split("|"))
-        row[syns_index] = json.dumps(str(syns))
+        row[syns_index] = json.dumps(syns)
     
     print "Writing to file"
     f = open(DATA.replace(".csv","")+"_out.csv", 'wb')
@@ -458,16 +433,344 @@ def fix_data():
     f.close()
     print "The output has been written to " + DATA.replace(".csv","")+"_out.csv"
      
+ 
+ 
+ 
+def data_get_contents():
+    f = open("data.csv")
+    reader = csv.reader(f)
+    rows = []
+    for row in reader:
+        t = []
+        for r in row:
+            try:
+                t.append(r.decode("UTF-8"))
+            except:
+                t.append(r)
+        rows.append(t)
+    f.close()
+    return rows
+def iso_get_contents():
+    f = open("ISOtoCountry.xls")
+    reader = csv.reader(f)
+    rows = [row for row in reader if row is not None]
+    f.close()
+    return rows
+def create_animal_list():
+    print "create_animal_list"
+    #Import the data
+    rows = data_get_contents()
+    headers = rows.pop(0)
+    #Stands for header index
+    def hi(s):
+        res = [index for index,h in enumerate(headers) if h.lower()==s.lower()]
+        if len(res) == 0:
+            return -2
+        return res[0]
+    
+    #Loop through the rows and get the data
+    country_index = hi("countries")
+    
+    kingdom_index = hi("kingdom")
+    phylum_index = hi("phylum")
+    class_index = hi("class")
+    order_index = hi("order")
+    family_index = hi("family")
+    genus_index = hi("genus")
+    species_index = hi("species")
+    
+    synonyms_index = hi("synonyms")
+    common_name_index = hi("Common names (Eng)")
+    scientific_name_index = hi("Scientific Name")
+    
+    country_list = set()
+    
+    names = {
+        "kingdom": set(),
+        "phylum": set(),
+        "class": set(),
+        "order": set(),
+        "family": set(),
+        "genus": set(),
+        "species": set(),
+        "synonym": set(),
+        "common": set(),
+        "Animal": set(),
+        "scientific": set()
+    }
+    
+    for row in rows:
+        #Work on country data
+        if row[country_index] == "N/A":
+            continue
+        countries = json.loads(row[country_index])
+        for status in countries:
+            #Some countries have their specific states. We don't care about that here
+            country_list.update(set([country.split(" (")[0] for country in countries[status]]))
+        
+        names["kingdom"].add(row[kingdom_index].lower())
+        names["phylum"].add(row[phylum_index].lower())
+        names["class"].add(row[class_index].lower())
+        names["order"].add(row[order_index].lower())
+        names["family"].add(row[family_index].lower())
+        names["genus"].add(row[genus_index].lower())
+        names["species"].add(row[species_index].lower())
+        names["scientific"].add(row[scientific_name_index].lower())
+        if row[synonyms_index].strip() != "":
+            names["synonym"].update([res.strip() for res in row[synonyms_index].split("|") if res is not None and res.strip() != ""])
+        names["common"].update(set(re.split(",|-",row[common_name_index].lower())))
+        
+    country_list = list(country_list)
+    
+    iso_rows = iso_get_contents()
+    
+    code_dict = defaultdict(str)
+    for row in iso_rows:
+        #For countries that have commas, the row is split into more than just [country, code]
+        if len(row) == 2:
+            code_dict[row[0].lower()] = row[1]
+        else:
+            code = row.pop()
+            code_dict[",".join(row).lower()] = code
+    
+    def rang(input):
+        letter = input[0].lower()
+        if letter in ["a", "b", "c", "d"]:
+            return "a-d"
+        elif letter in ["e", "f", "g", "h"]:
+            return "e-h"
+        elif letter in ["i", "j", "k", "l"]:
+            return "i-l"
+        elif letter in ["m", "n", "o", "p"]:
+            return "m-p"
+        elif letter in ["q", "r", "s", "t"]:
+            return "q-t"
+        elif letter in ["u", "v", "w", "x", "y", "z"]:
+            return "u-z"
+    
+    animal_list = {}
+    for type in names:
+        for name in names[type]:
+            if name == "":
+                continue
+            if isinstance(name, str):
+                name = unicodedata.normalize('NFKD', unicode(name,errors="ignore"))#.decode('ascii', 'ignore')
+            else:
+                name = unicodedata.normalize('NFKD', name).encode('ascii', errors='ignore')
+            if name == "":
+                continue
+            r = rang(name)
+            if r not in animal_list:
+                animal_list[r] = {}
+            if type not in animal_list[r]:
+                animal_list[r][type] = []
+            if name not in animal_list[r][type]:
+                animal_list[r][type].append(name)
+    
+    print "Writing to animal_list.json"
+    f = open("animal_list.json", "w")
+    f.write(json.dumps(animal_list))
+    f.close()
+    print "Complete."
+
+def e(s):
+    if isinstance(s, str):
+        return unicodedata.normalize('NFKD', unicode(s,errors="ignore"))#.decode('ascii', 'ignore')
+    else:
+        return unicodedata.normalize('NFKD', s).encode('ascii', errors='ignore')
+def create_data_json():
+    print "create_data_json"
+    #Import the data
+    rows = data_get_contents()
+    headers = rows.pop(0)
+    the_species = []
+    #Stands for header index
+    def hi(s):
+        res = [index for index,h in enumerate(headers) if h.lower()==s.lower()]
+        if len(res) == 0:
+            return -2
+        return res[0]
+    
+    #Loop through the rows and get the data
+    country_index = hi("countries")
+    
+    kingdom_index = hi("kingdom")
+    phylum_index = hi("phylum")
+    class_index = hi("class")
+    order_index = hi("order")
+    family_index = hi("family")
+    genus_index = hi("genus")
+    species_index = hi("species")
+    
+    synonyms_index = hi("synonyms")
+    common_name_index = hi("Common names (Eng)")
+    scientific_name_index = hi("Scientific Name")
+    
+    for row in rows:
+        species = {}
+        #Work on country data
+        if row[country_index] == "N/A":
+            continue
+        species["id"] = row[0]
+        countries = json.loads(row[country_index])
+        species["countries"] = []
+        for status in countries:
+            #Some countries have their specific states. We don't care about that here
+            species["countries"] = species["countries"] + [country.split(" (")[0] for country in countries[status]]
+        
+        species["names"] = [row[kingdom_index].lower()]
+        species["names"].append(row[phylum_index].lower())
+        species["names"].append(row[class_index].lower())
+        species["names"].append(row[order_index].lower())
+        species["names"].append(row[family_index].lower())
+        species["names"].append(row[genus_index].lower())
+        species["names"].append(e(row[species_index]).lower())
+        species["names"].append(row[scientific_name_index].lower())
+        if row[synonyms_index].strip() != "":
+            species["names"] += [res.strip() for res in e(row[synonyms_index]).split("|") if res is not None and res.strip() != ""]
+        species["names"] += species["names"] + list(set(re.split(",|-",e(row[common_name_index]).lower())))
+        
+        species["names"] = [n for n in species["names"] if n != ""]
+        species["scientific_name"] = e(row[scientific_name_index].lower())
+        
+        species["major_threats"] = row[hi("Major Threat(s)")] if row[hi("Major Threat(s)")] != "" and row[hi("Major Threat(s)")] != "[]" else ""
+        species["population"] = row[hi("Population")] if row[hi("Population")] != "" and row[hi("Population")] != "[]" else ""
+        species["red_list"] = row[hi("Red List status")] if row[hi("Red List status")] != "" and row[hi("Red List status")] != "[]" else ""
+        species["systems"] = row[hi("Systems")] if row[hi("Systems")] != "" and row[hi("Systems")] != "[]" else []
+        species["habitat_ecology"] = row[hi("Habitat and Ecology")] if row[hi("Habitat and Ecology")] != "" and row[hi("Habitat and Ecology")] != "[]" else ""
+        the_species.append(species)
+    
+    print "writing"
+    
+    #"""
+    filespecies = open('species.csv', 'wb')
+    filecountries = open('countries.csv', 'wb')
+    filenames = open('names.csv', 'wb')
+    csvspecies = csv.writer(filespecies, delimiter='|')
+    csvscountries = csv.writer(filecountries, delimiter='|')
+    csvsnames = csv.writer(filenames, delimiter='|')
+    
+    csvspecies.writerow(["id", "scientfic_name", "red_list", "major_threats"])
+    csvscountries.writerow(["id", "country"])
+    csvsnames.writerow(["id", "name"])
+    print len(the_species)
+    for row in the_species:
+        csvspecies.writerow([row["id"], row["scientific_name"].lower(),row["red_list"], e(row["major_threats"])])
+        for country in row["countries"]:
+            csvscountries.writerow([row["id"], country])
+        for name in row["names"]:
+                csvsnames.writerow([row["id"], name])
+    filespecies.close()
+    filecountries.close()
+    filenames.close()
+    
+    print "Done"
+    return
+    #"""
+    f = open("species.json", "w")
+    f.write(json.dumps(the_species))
+    f.close()
+    return
+    s = []
+    index = 0
+    while len(the_species) > 0:
+        s.append(the_species.pop())
+        if len(s) >= 5000:
+            f = open("species_" + str(index) + ".json", "w")
+            f.write(json.dumps(s))
+            f.close()
+            s = []
+            index += 1
+    f = open("species_" + str(index) + ".json", "w")
+    f.write(json.dumps(s))
+    f.close()
+    print "wrote to " + str(index+1) + " files."
+    
+def save_to_datastore():
+    r = range(0, 10)
+    for index in r:
+        #print len(json.loads(open("interactivethreatenedspecies/species_" + str(index) + ".json").read()))
+        #continue
+        print "Index: " + str(index)
+        req = urllib2.Request("http://localhost:12084/queue/cacher?index={0}".format(index))
+        try:
+            urllib2.urlopen(req).read()
+        except URLError as e:
+            print e.reason
+            exit()
+        
+        
+def search_data_api():
+    name_lower = "".lower()
+    type_upper = "".upper()
+    
+    rows = data_get_contents()
+    headers = rows.pop(0)
+    #Stands for header index
+    def hi(s):
+        res = [index for index,h in enumerate(headers) if h.lower()==s.lower()]
+        if len(res) == 0:
+            return -2
+        return res[0]
+    
+    def weight(rls):
+        if rls == "LC":
+            return 1
+        elif rls == "NT":
+            return 2
+        elif rls == "VU":
+            return 3
+        elif rls == "EN":
+            return 4
+        elif rls == "CR":
+            return 5
+        elif rls == "EW":
+            return 6
+        elif rls == "EX":
+            return 7
+        return 0
+    counts = Counter()
+    while len(rows) > 0:
+        row = rows.pop(0)
+        if name_lower.find(query.lower()):
+            continue
+        countries = json.loads(row[hi("countries")])
+        rls = row[hi("Red List Status")]
+        rls_weight = weight(rls)
+        #If it's 0, then it's not one of the seven statuses
+        if rls_weight == 0:
+            continue
+        for type in countries:
+            for country in countries[type]:
+                #try:
+                counts[country] += rls_weight
+                #except:
+                #    print country
+                #    exit()
+    print counts.most_common(10)
+    
 def main():
     #counts()
     #data_parse()
     #data_distinct()
-    #add__to_csv()
+    #add_to_csv()
     #analyze_countries()
     #analyze_red_list()
     #analyze_major_threats()
     #fix_data()
-    word_counter()
+    #word_counter()
+    #create_animal_list()
+    #search_data_api()
+    create_data_json()
+    #save_to_datastore()
+    exit()
+    f = open("interactivethreatenedspecies/species_0.json")
+    contents = json.loads(f.read())
+    for i,c in enumerate(contents):
+        if i >= 80:
+            print str(i) + ": " + str(c["systems"])
+        if i == 90:
+            exit()
 
 if __name__ == '__main__':
     main()

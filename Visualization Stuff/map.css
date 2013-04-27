@@ -1,29 +1,30 @@
-#body{
-}
-
-#titlebar {
-	font-size: medium;
+body{
+	background: #f2f2f2 url('earth.png') no-repeat;
 }
 
 #leftconsole {
-	border: 5px inset purple;
+	border: 2px solid #85dcea;
 	overflow: hidden;
-	padding-right: 20px;
+	border-radius: 8px;
+	height: 90%;
 }
 
 #rightconsole{ 
 	width: 400px;
-	padding: 0px 20px 20px 20px;
-	margin-left: 20px;
+	margin-left: 10px;
+	height: 90%;
+	border-width: 2px;
+	padding: 0px 0px 0px 0px;
 	float: right;
-	border: 5px inset purple;
 }
 
 #searchbar {
-    text-align: center;
-    margin: 10px;
-    font-size: 50%;
+    margin: 3px;
+    font-size: 75%;
     clear: left;
+    margin-left: 420px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .ui-autocomplete {
@@ -31,7 +32,7 @@
     overflow-y: auto;
     /* prevent horizontal scrollbar */
     overflow-x: hidden;
-    }
+}
     
 /* IE 6 doesn't support max-height
  * we use height instead, but this forces the menu to always be this tall

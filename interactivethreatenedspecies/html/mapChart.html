@@ -1,11 +1,12 @@
 <html>
   <head>
-
+    <!-- https://www.amazon.com/gp/orc/rml/DGll0BntRRMA?token=73Bu%2Fgeun7BnXhE0dsiHG8wLkuv2ybHGF1ujAREwCKG0CfWb6qkUA9AXRdEn5Jdn4BGMZWGksayF5M0GWt3hxTa8918H8M6yG6D9p9CUU.f.f3 -->
     <!-- My CSS -->
-    <link href="map.css" rel="stylesheet" type="text/css" />
+    <link href="css/map.css" rel="stylesheet" type="text/css" />
     
     <!-- JQuery Links -->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <link href="css/custom-theme/jquery-ui-1.10.2.custom.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
@@ -21,15 +22,19 @@
       var options;
       var data;
       var apiInitiated = false;
+      var countryNumberList = []
+      var countryInfoList = []
 
       function init() {
         apiInitiated = true;
-        console.log("Loaded API");
+        gapi.client.speciesapi.page.load({}).execute(function (){
+                  console.log("Loaded API");
+        });
       }
 
       function load() {
         var ROOT = 'https://interactivethreatenedspecies.appspot.com/_ah/api';
-        gapi.client.load('speciesapi', 'v1', init, ROOT);
+        gapi.client.load('speciesapi', 'v2', init, ROOT);
       }
 
       // Country Search bar stuff
@@ -39,13 +44,29 @@
 
       // How to update the map once a country is selected
       function updateMap(country) {
-        options = {
-          region: country,
-          colorAxis: {colors: ['blue', 'green','yellow', 'red']},
-          displayMode: 'regions',
-          resolution: 'country'
-        };
-        chart.draw(data, options);
+        if (country == 'WORLD') {
+          console.log("1" + country)
+          options = {
+            colorAxis: {colors: ['green','yellow', 'red']},
+            displayMode: 'regions',
+            resolution: 'country',
+            backgroundColor: {fill: '#f2f2f2'},
+            datalessRegionColor: '#cdcdc1'
+          };
+          chart.draw(data, options);
+        }
+        else {
+          console.log("2" + country)
+          options = {
+            region: country,
+            colorAxis: {colors: ['green','yellow', 'red']},
+            displayMode: 'regions',
+            resolution: 'country',
+            backgroundColor: {fill: '#f2f2f2'},
+            datalessRegionColor: 'cdcdc1'
+          };
+          chart.draw(data, options);
+        }
       }
 
       // How to make the search bar function
@@ -54,9 +75,9 @@
         source: function(request, response) {
           if(apiInitiated) {
             // Request results based off what was entered
-            var countriesObject = gapi.client. speciesapi.search.countries({'q':request.term});
+            var countriesObject = gapi.client.speciesapi.search.countries({'q':request.term});
             countriesObject.execute(function(countryResponse){
-                countryList = []
+                countryList = [];
                 countryId = [];
                 for(var i = 0; i < countryResponse.countries.length; i++) { 
                   //Fill in countries and ids for those countries
@@ -65,12 +86,13 @@
                 }
                 response(countryList)
             });
+            
           }
           else {
             alert("API not initiated.");
           }              
         },
-          select: function( event, ui ) {
+        select: function( event, ui ) {
             // When they select the country, find the right id and zoom to it
             for(var i = 0; i < countryList.length; i++) {
               if(countryList[i] == ui.item.value) { //TODO Check for countries we can't zoom to and not correct input
@@ -84,28 +106,53 @@
 
       // Animal Search Bar stuff here
       $(function() {
-        var availableTags = [
-          'Tiger',
-          'Monkey',
-          'Lizard',
-          'Cat',
-          'Dog',
-          'Owl',
-          'Bird'
-        ];
+        var animals = [];
 
         // TODO make this do something other than update the right panel
         function log( message ) {
-          document.getElementById("rightconsole").innerHTML=message;
+          document.getElementById("details").innerHTML=message;
+          $("#tabs").tabs( "select", "details" );
         }
       
         // How to make the search bar function
         $( "#animalTags" ).autocomplete({
-          source: availableTags, // TODO API call to generate this
+          source: function(request, response) {
+            if(apiInitiated) {
+              // Request results based off what was entered
+              var animalObject = gapi.client.speciesapi.search.animals({'q':request.term});
+              animalObject.execute(function(animalResponse){
+                animals = [];
+                for(var i = 0; i < animalResponse.animals.length; i++) { 
+                  //Fill in animals that are options
+                  animals.push(animalResponse.animals[i].name);
+                }
+                response(animals)
+              });
+            } 
+            else {
+              alert("API not initiated.");
+            }              
+          },
           select: function( event, ui ) {
-            log( ui.item ?
-              "Selected: " + ui.item.value :
-              "Nothing selected, input was " + this.value );
+            if(apiInitiated) {
+              // Request country data for animal selected
+              var dataObject = gapi.client.speciesapi.search.data({'animal':ui.item.value});
+              dataObject.execute(function(objectResponse){
+                countryNumberList = [];
+                countryInfoList = [];
+                var temp = [['Country', 'Extinct Animals']];
+                for(var i = 0; i < objectResponse.countries.length; i++) { 
+                  //Fill in animals that are options
+                  countryNumberList.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+                  temp.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+                }
+                data = google.visualization.arrayToDataTable(temp);
+                chart.draw(data, options);
+              });
+            }
+            else {
+              alert("API not initiated.");
+            }
           }
         });
       });  
@@ -121,19 +168,21 @@
         data = google.visualization.arrayToDataTable([
           ['Country', 'Extinct Animals'],
           ['Germany', 200],
-          ['US', 300],
-          ['Brazil', 400],
-          ['Canada', 500],
-          ['France', 600],
-          ['RU', 700],
-          ['China', 10]
+          ['United States', 219],
+          ['Brazil', 200],
+          ['Canada', 150],
+          ['France', 75],
+          ['Russia', 43],
+          ['China', 1]
         ]);
 
         // Original Options
         options = {
-          colorAxis: {colors: ['blue', 'green','yellow', 'red']},
+          colorAxis: {colors: ['green','yellow', 'red']},
           displayMode: 'regions',
-          resolution: 'country'
+          resolution: 'country',
+          backgroundColor: {fill: '#f2f2f2'},
+          datalessRegionColor: '#cdcdc1'
         };
 
         // Actually draw it
@@ -145,19 +194,62 @@
           function(eventData) {
             whereTheyClicked = chart.getSelection();  
             var country =  data.getValue(whereTheyClicked[0].row, 0);
-            var text = 'You clicked: ' + country;
-            document.getElementById("rightconsole").innerHTML=text;
+            // Hard coded Text. Fix soon.
+            var text = '<p>Information about : ' + country + '</p>';
+            text += '<p>' + 'Animals endangered: Panda, angelfish, catshark </p>';
+            text += '<p>' + 'Clusters of similar countries: United States, Russia, Mongolia</p>';
+            text += '<p>' + 'Rules related to search: If country is China and animal is aquatic, then major threat is pollution</p>';
+            document.getElementById("details").innerHTML=text;
+            selectDetailsTab();
         });
       };
 
+      //Tab Functionality 
+      $(function() {
+        $( "#rightconsole" ).tabs();
+      });
+
+      function selectDetailsTab() {
+        $( "#rightconsole" ).tabs({ active: 0 });
+      }
+
+      // Button Functionality
+      $(function() {
+        $( "input[type=submit], button" )
+        .button()
+        .click(function( event ) {
+          if(apiInitiated) {
+            // Request country data for animal selected
+            var dataObject = gapi.client.speciesapi.search.data({'animal':'animalia'});
+            dataObject.execute(function(objectResponse){
+              countryNumberList = [];
+              countryInfoList = [];
+              var temp = [['Country', 'Extinct Animals']];
+              for(var i = 0; i < objectResponse.countries.length; i++) { 
+                //Fill in animals that are options
+                countryNumberList.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+                temp.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+              }
+              data = google.visualization.arrayToDataTable(temp);
+              options = {
+                colorAxis: {colors: ['green','yellow', 'red']},
+                displayMode: 'regions',
+                resolution: 'country',
+                backgroundColor: {fill: '#f2f2f2'},
+                datalessRegionColor: '#cdcdc1'
+              };
+              chart.draw(data, options);
+            });
+          }
+          else {
+            alert("API not initiated.");
+          }
+        });
+      });
+
     </script>
   </head>
-  <body onload="load();">
-
-    <div id='titlebar'>
-      <h1>Team Planeteers Present...</h1>
-    </div>
-    
+  <body onload="load();">    
     <div id='searchbar'>
       <div class="ui-widget">
         <label for="countryTags">Country: </label>
@@ -165,13 +257,37 @@
         
         <label for="animalTags">Animal: </label>
         <input id="animalTags" />
+      
+        <button>Reset</button>
       </div>
     </div>
     
     <div id="body">
       <div id="rightconsole">
+        <ul>
+          <li><a href="#details">Detailed Look</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div id="details">
+          <p>To explore click a country or search by country and/or animal.</p>
+          <p>Some interesting general information:</p>
+          <ul>
+            <li>The United States has the most extinct species with 233.</li>
+            <li>The United States has the most ciritically endangered species with 206.</li>
+            <li>Mexico has the most endangered species with 239.</li>
+            <li>Indonesia has the most native species in our database with 5,334.</li>
+            <li>The Aland Islands have the least number native species in our database with only 1.</li>
+          </ul>
+        </div>
+        <div id="about">
+          <p>
+            There are currently species all over the world that are on the verge of becoming extinct. It's important that the population knows about these animals, learns where they are located, and understands the threats that they are facing. The protection of these different types of species is important to our ecosystem. By providing this information to the the public, we wish to bring about awareness.
+          </p>
+          <p> The information provided here is based off of the database provided by <a href="http://www.iucnredlist.org"> www.iucnredlist.org <a> </p>
+          <br />
+          <p> Web Designer: Amanda Cofsky <br/ > Web Developer: Ben Beadle </p>
+        </div>
       </div>
-
       <div id="leftconsole" >
         <div id="chart_div"></div>
       </div>

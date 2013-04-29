@@ -5,7 +5,7 @@ These are the API methods that get called when clients use the Endpoints API
 
 Version: 2.0
 """
-import logging, csv, json, ndbpickler
+import logging, csv, json, ndbpickler, time, md5
 from google.appengine.ext import endpoints
 from protorpc import remote
 from speciesapimessages import *
@@ -99,6 +99,35 @@ class SpeciesApi(remote.Service):
     
     return SearchAnimalsResponse(animals=results)
   
+  #Begin the stats analyzation
+  @endpoints.method(StatsInitRequest, StatsInitResponse, name='stats.init', path='stats/init', http_method='GET')
+  def stats_init(self, request):
+    
+    query = request.q
+    
+    if query == "" or query == None:
+        return StatsInitResponse(task_id="")
+    
+    task_id = str(md5.new(str(time.time())).hexdigest())
+    task = Task(url='/queue/stats', params={'task_id': task_id, 'q': query}, name=task_id)
+    task.add(queue_name='stats')
+
+    memcache.set('task|' + task_id, {'status': 'pending'})
+    return StatsInitResponse(task_id=task_id)
+  
+  #Get the results of the stats analyzation
+  @endpoints.method(StatsStatusRequest, StatsStatusResponse, name='stats.status', path='stats/status', http_method='GET')
+  def stats_status(self, request):
+    
+    result = memcache.get('task|' + request.task_id)
+    if result is None:
+        result = {'status': 'unknown'}
+    
+    #if result["status"] != "complete":
+    return StatsStatusResponse(status=result['status'])
+    
+  
+  """
   #Search the database for stats
   @endpoints.method(SearchDatabaseRequest, SearchDatabaseResponse, name='search.data', path='search/data', http_method='GET')
   def search_database(self, request):
@@ -108,6 +137,6 @@ class SpeciesApi(remote.Service):
     ret_val = [Country(name=data["name"],code=data["code"], rating=randint(1,100)) for data in datas]
     
     return SearchDatabaseResponse(countries=ret_val)
-  
+  """
 #Create the service
 speciesapi_service = endpoints.api_server([SpeciesApi], restricted=False)

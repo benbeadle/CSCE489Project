@@ -9,13 +9,18 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: css/
+  static_dir: html/css/
+- url: /js/
+  static_dir: html/js/
+
 # The API Endpoint handler
 - url: /_ah/spi/.*
   script: speciesapi.speciesapi_service
 
 # The API Endpoint handler
-- url: /queue/cacher
-  script: queue.cacher.app
+- url: /queue/stats
+  script: queue.stats.app
 
 - url: .*
   script: main.app

@@ -580,6 +580,7 @@ def e(s):
         return unicodedata.normalize('NFKD', s).encode('ascii', errors='ignore')
 def create_data_json():
     print "create_data_json"
+    #"""
     #Import the data
     rows = data_get_contents()
     headers = rows.pop(0)
@@ -616,21 +617,23 @@ def create_data_json():
         species["countries"] = []
         for status in countries:
             #Some countries have their specific states. We don't care about that here
-            species["countries"] = species["countries"] + [country.split(" (")[0] for country in countries[status]]
+            for c in [country.split(" (")[0] for country in countries[status]]:
+                species["countries"].append((status, c,))
         
-        species["names"] = [row[kingdom_index].lower()]
-        species["names"].append(row[phylum_index].lower())
-        species["names"].append(row[class_index].lower())
-        species["names"].append(row[order_index].lower())
-        species["names"].append(row[family_index].lower())
-        species["names"].append(row[genus_index].lower())
-        species["names"].append(e(row[species_index]).lower())
-        species["names"].append(row[scientific_name_index].lower())
+        species["names"] = [("kingdom",row[kingdom_index].lower(),)]
+        species["names"].append(("phylum",row[phylum_index].lower(),))
+        species["names"].append(("class",row[class_index].lower(),))
+        species["names"].append(("order",row[order_index].lower(),))
+        species["names"].append(("family",row[family_index].lower(),))
+        species["names"].append(("genus",row[genus_index].lower(),))
+        species["names"].append(("species",e(row[species_index]).lower(),))
+        species["names"].append(("scientific",row[scientific_name_index].lower(),))
         if row[synonyms_index].strip() != "":
-            species["names"] += [res.strip() for res in e(row[synonyms_index]).split("|") if res is not None and res.strip() != ""]
-        species["names"] += species["names"] + list(set(re.split(",|-",e(row[common_name_index]).lower())))
+            species["names"] += [("synonym",res.strip(),) for res in e(row[synonyms_index]).split("|") if res is not None and res.strip() != ""]
+        for n in set(re.split(",|-",e(row[common_name_index]).lower())):
+            species["names"].append(("common",n,))
         
-        species["names"] = [n for n in species["names"] if n != ""]
+        species["names"] = [n for n in species["names"] if n[1] != ""]
         species["scientific_name"] = e(row[scientific_name_index].lower())
         
         species["major_threats"] = row[hi("Major Threat(s)")] if row[hi("Major Threat(s)")] != "" and row[hi("Major Threat(s)")] != "[]" else ""
@@ -639,31 +642,83 @@ def create_data_json():
         species["systems"] = row[hi("Systems")] if row[hi("Systems")] != "" and row[hi("Systems")] != "[]" else []
         species["habitat_ecology"] = row[hi("Habitat and Ecology")] if row[hi("Habitat and Ecology")] != "" and row[hi("Habitat and Ecology")] != "[]" else ""
         the_species.append(species)
-    
-    print "writing"
-    
     #"""
+    """
+    print "writing"
     filespecies = open('species.csv', 'wb')
     filecountries = open('countries.csv', 'wb')
     filenames = open('names.csv', 'wb')
-    csvspecies = csv.writer(filespecies, delimiter='|')
-    csvscountries = csv.writer(filecountries, delimiter='|')
-    csvsnames = csv.writer(filenames, delimiter='|')
+    csvspecies = csv.writer(filespecies, delimiter=',')
+    csvscountries = csv.writer(filecountries, delimiter=',')
+    csvsnames = csv.writer(filenames, delimiter=',')
     
     csvspecies.writerow(["id", "scientfic_name", "red_list", "major_threats"])
     csvscountries.writerow(["id", "country"])
-    csvsnames.writerow(["id", "name"])
+    csvsnames.writerow(["id", "type", "name"])
     print len(the_species)
     for row in the_species:
         csvspecies.writerow([row["id"], row["scientific_name"].lower(),row["red_list"], e(row["major_threats"])])
         for country in row["countries"]:
-            csvscountries.writerow([row["id"], country])
+            csvscountries.writerow([row["id"], country[0], e(country[1])])
         for name in row["names"]:
-                csvsnames.writerow([row["id"], name])
+                csvsnames.writerow([row["id"], name[0], e(name[1])])
     filespecies.close()
     filecountries.close()
     filenames.close()
+    """
+    print "converting"
+    def weight(rls):
+        if rls == "LC" or rls == "LR/cd" or rls == "LR/lc":
+            return 1
+        elif rls == "NT" or rls == "LR/nt":
+            return 2
+        elif rls == "VU":
+            return 3
+        elif rls == "EN":
+            return 4
+        elif rls == "CR":
+            return 5
+        elif rls == "EW":
+            return 6
+        elif rls == "EX":
+            return 7
+        return 0
+    sqlstats = open('stats.sql', 'wb')
+    sqlstats.write('USE its;\n')
+    sqlstats.write('CREATE TABLE Stat (\nid CHAR(10),\nscientific_name CHAR(25),\nctype CHAR(25),\ncname CHAR(25),\nntype CHAR(25),\nnname CHAR(25), red_list CHAR(5),\nred_val TINYINT);\n')
+    count = 0
+    for row in the_species:
+        for country in row["countries"]:
+            #csvscountries.writerow([row["id"], country[0], e(country[1])])
+            for name in row["names"]:
+                sqlstats.write('INSERT INTO Stat (id, scientific_name, ctype, cname, ntype, nname, red_list, red_val) VALUES ("{0}","{1}","{2}","{3}","{4}","{5}", "{6}", {7});\n'.format(row["id"], e(row["scientific_name"]), e(country[0]), e(country[1]), e(name[0]), e(name[1]), row["red_list"], weight(row["red_list"])))
+                count += 1
+        #print count
+    sqlstats.close()
+    exit()
+    return
+    #file_name = "species"
+    #create_sql = 'CREATE TABLE Specie (\nid CHAR(10),\nscientific_name CHAR(10),\nred_list CHAR(5),\nmajor_threats TEXT);\n'
+    #insert_sql = 'id, scientific_name, red_list, major_threats'
+    #file_name = "countries"
+    #create_sql = 'CREATE TABLE Country (\nid CHAR(10),\nctype CHAR(25),\nname CHAR(25));\n'
+    #insert_sql = 'id, ctype, name'
+    file_name = "names"
+    create_sql = 'CREATE TABLE Name (\nid CHAR(10),\nntype CHAR(25),\nname CHAR(25));\n'
+    insert_sql = 'id, ntype, name'
     
+    sqlfile = open(file_name + ".sql", "w")
+    speciesf = open(file_name + ".csv")
+    csvreader = csv.reader(speciesf)
+    #speciessql.write('CREATE DATABASE its;\n')
+    sqlfile.write('USE its;\n')
+    for index,row in enumerate(csvreader):
+        if index == 0:
+            sqlfile.write(create_sql)
+            continue
+        sqlfile.write('INSERT INTO Name (' + insert_sql + ') VALUES ("' + '","'.join([r.replace('"','\\"') for r in row]) + '");\n')
+    sqlfile.close()
+    #    exit()
     print "Done"
     return
     #"""
@@ -701,8 +756,8 @@ def save_to_datastore():
         
         
 def search_data_api():
-    name_lower = "".lower()
-    type_upper = "".upper()
+    
+    name_lower = "lizard".lower()
     
     rows = data_get_contents()
     headers = rows.pop(0)
@@ -714,9 +769,9 @@ def search_data_api():
         return res[0]
     
     def weight(rls):
-        if rls == "LC":
+        if rls == "LC" or rls == "LR/cd" or rls == "LR/lc":
             return 1
-        elif rls == "NT":
+        elif rls == "NT" or rls == "LR/nt":
             return 2
         elif rls == "VU":
             return 3
@@ -730,23 +785,20 @@ def search_data_api():
             return 7
         return 0
     counts = Counter()
+    hic = hi("countries")
+    hir = hi("Red List Status")
     while len(rows) > 0:
         row = rows.pop(0)
-        if name_lower.find(query.lower()):
-            continue
-        countries = json.loads(row[hi("countries")])
-        rls = row[hi("Red List Status")]
+        
+        countries = json.loads(row[hic])
+        rls = row[hir]
         rls_weight = weight(rls)
-        #If it's 0, then it's not one of the seven statuses
+        #If it's 0, then it's not one of the valid statuses (AKA DD - data deficient)
         if rls_weight == 0:
             continue
         for type in countries:
             for country in countries[type]:
-                #try:
                 counts[country] += rls_weight
-                #except:
-                #    print country
-                #    exit()
     print counts.most_common(10)
     
 def main():

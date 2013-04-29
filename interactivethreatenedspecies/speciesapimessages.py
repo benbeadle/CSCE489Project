@@ -36,8 +36,12 @@ class SearchAnimalsResponse(messages.Message):
   animals = messages.MessageField(AnimalResult, 1, repeated=True)
   
 
-class SearchDatabaseRequest(messages.Message):
-  animal = messages.StringField(1, required=True)
-  type = messages.EnumField(AnimalTypeEnum, 2, default='COMMON')
-class SearchDatabaseResponse(messages.Message):
-  countries = messages.MessageField(Country, 1, repeated=True)
+class StatsInitRequest(messages.Message):
+  q = messages.StringField(1, required=True)
+class StatsInitResponse(messages.Message):
+  task_id = messages.StringField(1, required=True)
+
+class StatsStatusRequest(messages.Message):
+  task_id = messages.StringField(1, required=True)
+class StatsStatusResponse(messages.Message):
+  status = messages.StringField(1, required=True)

@@ -145,6 +145,13 @@
                   //Fill in animals that are options
                   countryNumberList.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
                   temp.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+                  if(objectResponse.countries[i].name = 'United States') {
+                    console.log('US');
+                    countryNumberList.push(['US-AK', objectResponse.countries[i].rating]);
+                    temp.push(['US-AK', objectResponse.countries[i].rating]);
+                    countryNumberList.push(['US-HI', objectResponse.countries[i].rating]);
+                    temp.push(['US-HI', objectResponse.countries[i].rating]);
+                  }
                 }
                 data = google.visualization.arrayToDataTable(temp);
                 chart.draw(data, options);
@@ -163,18 +170,32 @@
 
       // Draw the original map
       function drawRegionsMap() {
-        // Original data to use in map
-        // TODO API call to generate this
-        data = google.visualization.arrayToDataTable([
-          ['Country', 'Extinct Animals'],
-          ['Germany', 200],
-          ['United States', 219],
-          ['Brazil', 200],
-          ['Canada', 150],
-          ['France', 75],
-          ['Russia', 43],
-          ['China', 1]
-        ]);
+        if(apiInitiated) {
+          // Request country data for animal selected
+          var dataObject = gapi.client.speciesapi.search.data({'animal':'animalia'});
+          dataObject.execute(function(objectResponse){
+            countryNumberList = [];
+            countryInfoList = [];
+            var temp = [['Country', 'Extinct Animals']];
+            for(var i = 0; i < objectResponse.countries.length; i++) { 
+              //Fill in animals that are options
+              countryNumberList.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+              temp.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
+              if(objectResponse.countries[i].name = 'United States') {
+                console.log('US');
+                countryNumberList.push(['US-AK', objectResponse.countries[i].rating]);
+                temp.push(['US-AK', objectResponse.countries[i].rating]);
+                countryNumberList.push(['US-HI', objectResponse.countries[i].rating]);
+                temp.push(['US-HI', objectResponse.countries[i].rating]);
+              }
+            }
+            data = google.visualization.arrayToDataTable(temp);
+            chart.draw(data, options);
+          });
+        }
+        else {
+          alert("API not initiated.");
+        }
 
         // Original Options
         options = {

@@ -9,10 +9,12 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: css/
+- url: /css/
   static_dir: html/css/
 - url: /js/
   static_dir: html/js/
+- url: /images/
+  static_dir: html/
 
 # The API Endpoint handler
 - url: /_ah/spi/.*

@@ -522,31 +522,14 @@ def create_animal_list():
         
     country_list = list(country_list)
     
-    iso_rows = iso_get_contents()
-    
-    code_dict = defaultdict(str)
-    for row in iso_rows:
-        #For countries that have commas, the row is split into more than just [country, code]
-        if len(row) == 2:
-            code_dict[row[0].lower()] = row[1]
-        else:
-            code = row.pop()
-            code_dict[",".join(row).lower()] = code
-    
     def rang(input):
         letter = input[0].lower()
-        if letter in ["a", "b", "c", "d"]:
-            return "a-d"
-        elif letter in ["e", "f", "g", "h"]:
-            return "e-h"
-        elif letter in ["i", "j", "k", "l"]:
-            return "i-l"
-        elif letter in ["m", "n", "o", "p"]:
-            return "m-p"
-        elif letter in ["q", "r", "s", "t"]:
-            return "q-t"
-        elif letter in ["u", "v", "w", "x", "y", "z"]:
-            return "u-z"
+        letter_ord = ord(letter)
+        if letter_ord % 2 == 1:
+            r = letter + "-" + chr(letter_ord+1)
+        else:
+            r = chr(letter_ord-1) + "-" + letter
+        return r
     
     animal_list = {}
     for type in names:
@@ -584,7 +567,7 @@ def create_data_json():
     #Import the data
     rows = data_get_contents()
     headers = rows.pop(0)
-    the_species = []
+    the_species = {}
     #Stands for header index
     def hi(s):
         res = [index for index,h in enumerate(headers) if h.lower()==s.lower()]
@@ -641,7 +624,13 @@ def create_data_json():
         species["red_list"] = row[hi("Red List status")] if row[hi("Red List status")] != "" and row[hi("Red List status")] != "[]" else ""
         species["systems"] = row[hi("Systems")] if row[hi("Systems")] != "" and row[hi("Systems")] != "[]" else []
         species["habitat_ecology"] = row[hi("Habitat and Ecology")] if row[hi("Habitat and Ecology")] != "" and row[hi("Habitat and Ecology")] != "[]" else ""
-        the_species.append(species)
+        the_species[species["scientific_name"]] = species
+    
+    f = open("species.json", "w")
+    f.write(json.dumps(the_species))
+    f.close()
+    print "Done"
+    exit()
     #"""
     """
     print "writing"
@@ -800,6 +789,19 @@ def search_data_api():
             for country in countries[type]:
                 counts[country] += rls_weight
     print counts.most_common(10)
+def create_country_list():
+    iso_rows = iso_get_contents()
+    code_dict = defaultdict(str)
+    for row in iso_rows:
+        #For countries that have commas, the row is split into more than just [country, code]
+        if len(row) == 2:
+            code_dict[e(row[0].lower())] = row[1]
+        else:
+            code = row.pop()
+            code_dict[e(",".join(row).lower())] = code
+    f = open("country_list.json", "w")
+    f.write(json.dumps(code_dict))
+    f.close()
     
 def main():
     #counts()
@@ -812,8 +814,9 @@ def main():
     #fix_data()
     #word_counter()
     #create_animal_list()
+    create_country_list()
     #search_data_api()
-    create_data_json()
+    #create_data_json()
     #save_to_datastore()
     exit()
     f = open("interactivethreatenedspecies/species_0.json")

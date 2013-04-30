@@ -3,22 +3,8 @@ These are the Request and Response classes used by the Endpoints API to say what
 """
 from protorpc import messages
 
-
-class AnimalTypeEnum(messages.Enum):  
-    KINGDOM = 1
-    PHYLUM = 2
-    CLASS = 3
-    ORDER = 4
-    FAMILY = 5
-    GENUS = 6
-    SPECIES = 7
-    SCIENTIFIC = 8
-    SYNONYM = 9
-    COMMON = 10
-
 class SearchCountriesRequest(messages.Message):
   q = messages.StringField(1)
-
 class Country(messages.Message):
     name = messages.StringField(1, required=True)
     code = messages.StringField(2, required=True)
@@ -45,3 +31,7 @@ class StatsStatusRequest(messages.Message):
   task_id = messages.StringField(1, required=True)
 class StatsStatusResponse(messages.Message):
   status = messages.StringField(1, required=True)
+  specie_count = messages.IntegerField(2)
+  countries = messages.MessageField(Country, 3, repeated=True)
+  common_countries = messages.MessageField(Country, 4, repeated=True)
+  native_countries = messages.MessageField(Country, 5, repeated=True)

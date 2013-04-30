@@ -15,6 +15,7 @@
    
     <!--Google App Engine -->
     <script src="https://apis.google.com/js/client.js?onload=load"></script>
+    <script src="js/canvas.js"></script>
 
     <script type='text/javascript'>
 
@@ -22,18 +23,70 @@
       var options;
       var data;
       var apiInitiated = false;
+      var crunching = false;
       var countryNumberList = []
       var countryInfoList = []
+      var task_id = "";
+      var all_species = [
+          ['Country', 'Extinct Animals'],
+          ["Montenegro",1125],["Equatorial Guinea",1253],["Brunei Darussalam",1280],["Nicaragua",2103],["Saint Kitts and Nevis",600],["Tajikistan",568],["Cape Verde",461],["French Polynesia",1639],["Guadeloupe",755],["Brazil",5025],["Israel",1821],["Mayotte",894],["Guyana",1582],["Paraguay",1198],["Egypt",1836],["Monaco",234],["Slovakia",889],["Costa Rica",2826],["Lebanon",822],["Greece",2040],["United Kingdom",1261],["Mauritania",1063],["Papua New Guinea",3417],["Gibraltar",526],["Togo",1401],["Ghana",1962],["Taiwan, Province of China",2568],["Romania",1144],["Pakistan",1672],["Bhutan",993],["Cote d'Ivoire",1989],["Algeria",1105],["Benin",1312],["Angola",2220],["Sudan",2348],["Trinidad and Tobago",1061],["Marshall Islands",1047],["Gambia",1130],["France",2178],["Sierra Leone",1616],["Montserrat",542],["Heard Island and McDonald Islands",102],["Saint Pierre and Miquelon",354],["Lithuania",607],["Bulgaria",1176],["Congo",1763],["Bangladesh",1704],["Argentina",2391],["El Salvador",1455],["Afghanistan",832],["Spain",2964],["Yemen",1676],["Nauru",853],["Gabon",1708],["Fiji",1725],["Italy",2126],["French Southern Territories",283],["Libya",743],["Chile",1338],["Panama",2822],["Kyrgyzstan",562],["Turks and Caicos Islands",592],["Bermuda",666],["South Africa",3460],["Vanuatu",1329],["Cameroon",3145],["South Georgia and the South Sandwich Islands",184],["Tuvalu",936],["Belgium",927],["Dominican Republic",1040],["Botswana",1127],["Hong Kong",866],["New Caledonia",1988],["Barbados",650],["Mauritius",1557],["Mali",1107],["Tanzania, United Republic of",4533],["Slovenia",1242],["Cayman Islands",617],["Uzbekistan",641],["Poland",1029],["Anguilla",482],["Guinea-Bissau",1104],["Mexico",6227],["Pitcairn",368],["Belarus",636],["Cambodia",2415],["Congo, The Democratic Republic of the",3834],["Malaysia",4697],["Ukraine",1115],["Croatia",1468],["Solomon Islands",1947],["Northern Mariana Islands",1019],["Tonga",882],["Isle of Man",37],["Syrian Arab Republic",979],["Uruguay",961],["Mongolia",719],["British Indian Ocean Territory",830],["Turkmenistan",742],["Latvia",699],["Indonesia",7013],["Disputed Territory",58],["Grenada",526],["Kiribati",1028],["Bahamas",844],["Palestinian Territory, Occupied",422],["Armenia",645],["Madagascar",3392],["Portugal",1710],["Czech Republic",906],["China",4803],["Iran, Islamic Republic of",1567],["Morocco",1389],["American Samoa",923],["Finland",793],["Canada",1523],["Comoros",1045],["Svalbard and Jan Mayen",200],["Sweden",936],["Tokelau",599],["Sri Lanka",2704],["Swaziland",887],["Oman",1333],["Ecuador",4681],["Andorra",335],["Kenya",3373],["Kazakhstan",1009],["Aruba",416],["Qatar",647],["Turkey",1691],["Puerto Rico",838],["Martinique",577],["Uganda",2366],["Denmark",934],["Honduras",2372],["Moldova",575],["Iraq",963],["New Zealand",1178],["Burkina Faso",912],["Christmas Island",548],["Sao Tome and Principe",397],["Nepal",1738],["Holy See",32],["Germany",1446],["Singapore",2278],["Estonia",591],["Saint Lucia",637],["Antarctica",149],["Micronesia, Federated States of",1463],["Sint Maarten",299],["Mozambique",2745],["Bolivia, Plurinational States of",2487],["Faroe Islands",378],["Curacao",356],["India",5640],["Guatemala",2351],["Viet Nam",3864],["Western Sahara",521],["Virgin Islands, British",542],["Norfolk Island",444],["Antigua and Barbuda",626],["Albania",1212],["Korea, Democratic People's Republic of",748],["Serbia",965],["Chad",983],["Luxembourg",571],["Zimbabwe",1428],["Palau",1648],["Bahrain",669],["Malta",651],["Bouvet Island",67],["Cook Islands",777],["Rwanda",1167],["Haiti",1087],["Saint Martin",273],["Macao",119],["Wallis and Futuna",888],["Tunisia",1018],["Falkland Islands",333],["Russian Federation",2946],["Samoa",967],["Somalia",2030],["Saint Vincent and the Grenadines",614],["Macedonia, the former Yugoslav Republic of",1053],["Ethiopia",1746],["Niger",908],["Norway",923],["Dominica",641],["United States Minor Outlying Islands",896],["Kuwait",760],["Suriname",1402],["Liechtenstein",471],["Japan",3343],["Saint Barthelemy",127],["Liberia",1627],["Korea, Republic of",892],["Thailand",4862],["Azerbaijan",803],["San Marino",73],["Netherlands",957],["Eritrea",1607],["Aland Islands",2],["Netherlands Antilles",331],["Greenland",346],["Burundi",1305],["French Guiana",1400],["Iceland",484],["Cyprus",738],["Maldives",940],["Australia",6312],["Seychelles",1735],["Philippines",3982],["Timor-Leste",496],["Virgin Islands, U.S.",526],["Lao People's Democratic Republic",2218],["Reunion",1101],["Zambia",2014],["Myanmar",3543],["Bosnia and Herzegovina",1014],["United States",8685],["South Sudan",860],["Jordan",1376],["United Arab Emirates",924],["Central African Republic",1483],["Cuba",1327],["Niue",591],["Bonaire, Sint Eustatius and Saba",296],["Guam",578],["Cocos",453],["Colombia",5356],["Guinea",1878],["Jersey",63],["Austria",1288],["Namibia",1519],["Belize",1307],["Nigeria",2421],["Guernsey",54],["Jamaica",930],["Senegal",1515],["Georgia",743],["Switzerland",1092],["Hungary",932],["Saudi Arabia",1600],["Malawi",1911],["Peru",4199],["Saint Helena, Ascension and Tristan da Cunha",478],["Ireland",801],["Venezuela",3134],["Djibouti",1278],["Lesotho",504]]
 
       function init() {
         apiInitiated = true;
-        gapi.client.speciesapi.page.load({}).execute(function (){
-                  console.log("Loaded API");
-        });
+        console.log("Loaded API");
+        $("#animalTags").focus();
       }
-
+        function stats_status() {
+            gapi.client.speciesapi.stats.status({'task_id':task_id}).execute(function(resp) {
+                console.log(resp);
+                if(resp.status == "completed") {
+                    $("#loadingSearch").hide();
+                    $("#animalSearch").show();
+                    countryNumberList = [];
+                    countryInfoList = [];
+                    var temp = [['Country', 'Extinct Animals']];
+                    var res = "";
+                    for(var i = 0; i < resp.countries.length; i++) {
+                        //if(resp.countries[i].code == "")
+                        //    console.log(resp.countries[i].name + " is empty")
+                        res += '["' + resp.countries[i].name + '",' + resp.countries[i].rating + "],";
+                      //Fill in animals that are options
+                      countryNumberList.push([resp.countries[i].name, resp.countries[i].rating]);
+                      temp.push([resp.countries[i].name, resp.countries[i].rating]);
+                    }
+                    $("#worse_countries").html("")
+                    var html = "";
+                    for(var i = 0; i < resp.common_countries.length; i++) {
+                        var c = resp.common_countries[i];
+                        if(html != "")
+                            html += "<br />";
+                        html += c.name + ": " + c.rating;
+                    }
+                    $("#worse_countries").html(html);
+                    $("#native_countries").html("");
+                    var html = "";
+                    for(var i = 0; i < resp.native_countries.length; i++) {
+                        var c = resp.native_countries[i];
+                        if(html != "")
+                            html += "<br />";
+                        html += c.name + ": " + c.rating;
+                    }
+                    $("#native_countries").html(html);
+                    //console.log(res);
+                    $("#specie_count").html("Total Species: " + resp.specie_count)
+                    data = google.visualization.arrayToDataTable(temp);
+                    chart.draw(data, options);
+                    $("#details_intro").hide();
+                    $("#details_details").show();
+                    crunching = false;
+                } else {
+                    setTimeout(stats_status, 1500);
+                }
+            });
+        }
       function load() {
-        var ROOT = 'https://interactivethreatenedspecies.appspot.com/_ah/api';
+        var host = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+        var ROOT = host + '/_ah/api';
         gapi.client.load('speciesapi', 'v2', init, ROOT);
       }
 
@@ -79,10 +132,12 @@
             countriesObject.execute(function(countryResponse){
                 countryList = [];
                 countryId = [];
-                for(var i = 0; i < countryResponse.countries.length; i++) { 
-                  //Fill in countries and ids for those countries
-                  countryList.push(countryResponse.countries[i].name);
-                  countryId.push(countryResponse.countries[i].code);
+                if(countryResponse.countries) {
+                    for(var i = 0; i < countryResponse.countries.length; i++) { 
+                      //Fill in countries and ids for those countries
+                      countryList.push(countryResponse.countries[i].name);
+                      countryId.push(countryResponse.countries[i].code);
+                    }
                 }
                 response(countryList)
             });
@@ -122,11 +177,16 @@
               var animalObject = gapi.client.speciesapi.search.animals({'q':request.term});
               animalObject.execute(function(animalResponse){
                 animals = [];
-                for(var i = 0; i < animalResponse.animals.length; i++) { 
-                  //Fill in animals that are options
-                  animals.push(animalResponse.animals[i].name);
+                if(animalResponse.animals) {
+                    for(var i = 0; i < animalResponse.animals.length; i++) { 
+                      //Fill in animals that are options
+                      animals.push(animalResponse.animals[i].name);
+                    }
                 }
-                response(animals)
+                if(!crunching) {
+                    $(".ui-autocomplete").show();
+                    response(animals);
+                }
               });
             } 
             else {
@@ -136,24 +196,39 @@
           select: function( event, ui ) {
             if(apiInitiated) {
               // Request country data for animal selected
-              var dataObject = gapi.client.speciesapi.search.data({'animal':ui.item.value});
+              $("#animalSearch").hide();
+              $("#loadingSearch").show();
+              crunching = true;
+              var dataObject = gapi.client.speciesapi.stats.init({'q':ui.item.value});
               dataObject.execute(function(objectResponse){
-                countryNumberList = [];
-                countryInfoList = [];
-                var temp = [['Country', 'Extinct Animals']];
-                for(var i = 0; i < objectResponse.countries.length; i++) { 
-                  //Fill in animals that are options
-                  countryNumberList.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
-                  temp.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
-                }
-                data = google.visualization.arrayToDataTable(temp);
-                chart.draw(data, options);
+                task_id = objectResponse.task_id;
+                stats_status();
+                
               });
             }
             else {
               alert("API not initiated.");
             }
           }
+        }).keydown(function(e){
+            if (e.keyCode === 13){
+                if(apiInitiated) {
+                  // Request country data for animal selected
+                  $("#animalSearch").hide();
+                  $("#loadingSearch").show();
+                  $(".ui-autocomplete").hide();
+                  crunching = true;
+                  var dataObject = gapi.client.speciesapi.stats.init({'q':$("#animalTags").val()});
+                  dataObject.execute(function(objectResponse){
+                    task_id = objectResponse.task_id;
+                    stats_status();
+                    
+                  });
+                }
+                else {
+                  alert("API not initiated.");
+                }
+            }
         });
       });  
    
@@ -165,16 +240,7 @@
       function drawRegionsMap() {
         // Original data to use in map
         // TODO API call to generate this
-        data = google.visualization.arrayToDataTable([
-          ['Country', 'Extinct Animals'],
-          ['Germany', 200],
-          ['United States', 219],
-          ['Brazil', 200],
-          ['Canada', 150],
-          ['France', 75],
-          ['Russia', 43],
-          ['China', 1]
-        ]);
+        data = google.visualization.arrayToDataTable(all_species);
 
         // Original Options
         options = {
@@ -218,47 +284,45 @@
         $( "input[type=submit], button" )
         .button()
         .click(function( event ) {
-          if(apiInitiated) {
-            // Request country data for animal selected
-            var dataObject = gapi.client.speciesapi.search.data({'animal':'animalia'});
-            dataObject.execute(function(objectResponse){
-              countryNumberList = [];
-              countryInfoList = [];
-              var temp = [['Country', 'Extinct Animals']];
-              for(var i = 0; i < objectResponse.countries.length; i++) { 
-                //Fill in animals that are options
-                countryNumberList.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
-                temp.push([objectResponse.countries[i].name, objectResponse.countries[i].rating]);
-              }
-              data = google.visualization.arrayToDataTable(temp);
-              options = {
+            data = google.visualization.arrayToDataTable(all_species);
+            options = {
                 colorAxis: {colors: ['green','yellow', 'red']},
                 displayMode: 'regions',
                 resolution: 'country',
                 backgroundColor: {fill: '#f2f2f2'},
                 datalessRegionColor: '#cdcdc1'
-              };
-              chart.draw(data, options);
-            });
-          }
-          else {
-            alert("API not initiated.");
-          }
+            };
+            chart.draw(data, options);
+            
+            $("#specie_count").html("Total Species: " + 40340)
+            $("#worse_countries").html('United States: 8685<br />Indonesia: 7013<br />Australia: 6312<br />Mexico: 6227<br />India: 5640<br />Colombia: 5356<br />Brazil: 5025<br />Thailand: 4862<br />China: 4803<br />Malaysia: 4697');
+            $("#native_countries").html('Indonesia: 4550<br />United States: 3850<br />Colombia: 3807<br />Mexico: 3702<br />India: 3656<br />Brazil: 3565<br />Australia: 3538<br />Thailand: 3374<br />China: 3269<br />Peru: 3183');
+            $("#details_intro").hide();
+            $("#details_details").show();
         });
       });
 
     </script>
   </head>
   <body onload="load();">    
-    <div id='searchbar'>
+    <div id='searchbar' style="height:33px;">
       <div class="ui-widget">
-        <label for="countryTags">Country: </label>
-        <input id="countryTags" />
-        
-        <label for="animalTags">Animal: </label>
-        <input id="animalTags" />
       
-        <button>Reset</button>
+        <span style="height:20px;">
+            <label for="countryTags">Country: </label>
+            <input id="countryTags" />
+        </span>
+        
+        <span id="animalSearch" style="height:20px;">
+            <label for="animalTags">Animal: </label>
+            <input id="animalTags" />
+          
+            <button>Reset</button>
+        </span>
+        <span id="loadingSearch" style="display:none;height:20px;color:#4dac84;">
+            <span id="loaderImage" ></span>
+            <span>Crunching Numbers.</span>
+        </span>
       </div>
     </div>
     
@@ -269,15 +333,24 @@
           <li><a href="#about">About</a></li>
         </ul>
         <div id="details">
-          <p>To explore click a country or search by country and/or animal.</p>
-          <p>Some interesting general information:</p>
-          <ul>
-            <li>The United States has the most extinct species with 233.</li>
-            <li>The United States has the most ciritically endangered species with 206.</li>
-            <li>Mexico has the most endangered species with 239.</li>
-            <li>Indonesia has the most native species in our database with 5,334.</li>
-            <li>The Aland Islands have the least number native species in our database with only 1.</li>
-          </ul>
+            <span id="details_intro">
+              <p>To explore click a country or search by country and/or animal.</p>
+              <p>Some interesting general information:</p>
+              <ul>
+                <li>The United States has the most extinct species with 233.</li>
+                <li>The United States has the most ciritically endangered species with 206.</li>
+                <li>Mexico has the most endangered species with 239.</li>
+                <li>Indonesia has the most native species in our database with 5,334.</li>
+                <li>The Aland Islands have the least number native species in our database with only 1.</li>
+              </ul>
+            </span>
+            <span id="details_details" style="display:none;">
+                <p id="specie_count">Total Species: --</p>
+                <p style="font-weight:bold;"><br />Worse Countries</p>
+                <span id="worse_countries"></span>
+                <p style="font-weight:bold;"><br />Native Countries</p>
+                <span id="native_countries"></span>
+            </span>
         </div>
         <div id="about">
           <p>
@@ -292,6 +365,45 @@
         <div id="chart_div"></div>
       </div>
     </div>
-  
+    
+    <script type="text/javascript">
+        var cSpeed=9;
+        var cWidth=20;
+        var cHeight=20;
+        var cTotalFrames=25;
+        var cFrameWidth=20;
+        var cImageSrc='images/sprites.gif';
+        
+        var cImageTimeout=false;
+        
+        function startAnimation(){
+            
+            document.getElementById('loaderImage').innerHTML='<canvas id="canvas" width="'+cWidth+'" height="'+cHeight+'"><p>Your browser does not support the canvas element.</p></canvas>';
+            
+            //FPS = Math.round(100/(maxSpeed+2-speed));
+            FPS = Math.round(100/cSpeed);
+            SECONDS_BETWEEN_FRAMES = 1 / FPS;
+            g_GameObjectManager = null;
+            g_run=genImage;
+
+            g_run.width=cTotalFrames*cFrameWidth;
+            genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+            initCanvas();
+        }
+        
+        
+        function imageLoader(s, fun)//Pre-loads the sprites image
+        {
+            clearTimeout(cImageTimeout);
+            cImageTimeout=0;
+            genImage = new Image();
+            genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+            genImage.onerror=new Function('alert(\'Could not load the image\')');
+            genImage.src=s;
+        }
+        
+        //The following code starts the animation
+        new imageLoader(cImageSrc, 'startAnimation()');
+    </script>
   </body>
 </html>

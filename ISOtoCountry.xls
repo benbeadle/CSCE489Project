@@ -12,7 +12,7 @@ American Samoa,AS
 Austria,AT
 Australia,AU
 Aruba,AW
-Åland Islands,AX
+Aland Islands,AX
 Azerbaijan,AZ
 Bosnia and Herzegovina,BA
 Barbados,BB
@@ -23,7 +23,7 @@ Bulgaria,BG
 Bahrain,BH
 Burundi,BI
 Benin,BJ
-Saint Barthélemy,BL
+Saint Barthelemy,BL
 Bermuda,BM
 Brunei Darussalam,BN
 Bolivia, Plurinational State of,BO
@@ -41,7 +41,7 @@ Congo, the Democratic Republic of the,CD
 Central African Republic,CF
 Congo,CG
 Switzerland,CH
-Côte d'Ivoire,CI
+Cote d'Ivoire,CI
 Cook Islands,CK
 Chile,CL
 Cameroon,CM
@@ -185,7 +185,7 @@ Portugal,PT
 Palau,PW
 Paraguay,PY
 Qatar,QA
-Réunion,RE
+Reunion,RE
 Romania,RO
 Serbia,RS
 Russian Federation,RU
@@ -247,3 +247,18 @@ Mayotte,YT
 South Africa,ZA
 Zambia,ZM
 Zimbabwe,ZW
+Cote d'Ivoire,CI
+Saint Martin,MF
+Curacao,CW
+Reunion,RE
+Netherlands Antilles,NL
+Sint Maarten,SX
+Falkland Islands,FK
+Moldova,MD
+Aland Islands,AX
+Venezuela,VE
+Bolivia, Plurinational States of,BO
+Cocos,CC
+Palestinian Territory, Occupied,PS
+Holy See,VA
+Saint Barthelemy,BL

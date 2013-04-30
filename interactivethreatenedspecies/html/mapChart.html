@@ -53,12 +53,12 @@
                       //Fill in animals that are options
                       countryNumberList.push([resp.countries[i].name, resp.countries[i].rating]);
                       temp.push([resp.countries[i].name, resp.countries[i].rating]);
-                      if(objectResponse.countries[i].name = 'United States') {
+                      if(resp.countries[i].name = 'United States') {
                         console.log('US');
-                        countryNumberList.push(['US-AK', objectResponse.countries[i].rating]);
-                        temp.push(['US-AK', objectResponse.countries[i].rating]);
-                        countryNumberList.push(['US-HI', objectResponse.countries[i].rating]);
-                        temp.push(['US-HI', objectResponse.countries[i].rating]);
+                        countryNumberList.push(['US-AK', resp.countries[i].rating]);
+                        temp.push(['US-AK', resp.countries[i].rating]);
+                        countryNumberList.push(['US-HI', resp.countries[i].rating]);
+                        temp.push(['US-HI', resp.countries[i].rating]);
                       }
                     }
                     $("#worse_countries").html("")
